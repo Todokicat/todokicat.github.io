@@ -35,48 +35,48 @@ header nav ul {
 /**** CSS FOR ALICE TITLE AND BLURB ****/
 
 /* CSS for the main container */
-.container {
+.alice-title-container {
     display: flex;
     justify-content: center;
     margin: 20px; /* Adjust as needed */
 }
 
 /* CSS for the image container */
-.image-container {
+.alice-title-image-container {
     border: 1px solid #ccc; /* Border around the image container */
     margin-right: 10px; /* Adjust spacing between image and blurb container */
 }
 
 /* CSS for the image */
-.centered-image {
+.alice-title-centered-image {
     max-width: 50%; /* Set maximum width to 100% of container - adjust for image size*/
     max-height: 50px; /* Set maximum height to 200 pixels - adjust for image size*/
     width: auto; /* Maintain aspect ratio */
 }
 
 /* CSS for the blurb container */
-.blurb-container {
+.alice-title-blurb-container {
     border: 1px solid #ccc; /* Border around the blurb container */
     flex: 1; /* Allow blurb container to take remaining space */
 }
 
 /* CSS for the blurb */
-.blurb {
+.alice-title-blurb {
     padding: 10px; /* Padding inside the blurb container */
     font-size: 16px; /* Change font size to 16 pixels */
 }
 
 /* Responsive CSS */
 @media (max-width: 768px) { /* Adjust breakpoint as needed */
-    .container {
+    .alice-title-container {
         flex-direction: column; /* Stack items vertically on smaller screens */
     }
-    .image-container,
-    .blurb-container {
+    .alice-title-image-container,
+    .alice-title-blurb-container {
         width: 100%; /* Set width to 100% on smaller screens */
         margin: 0; /* Remove margin on smaller screens */
     }
-    .image-container {
+    .alice-title-image-container {
         margin-bottom: 10px; /* Add space between image and blurb container */
     }
 }
