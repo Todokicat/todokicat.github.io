@@ -46,8 +46,8 @@ header nav ul {
     text-align: center;
 }
 .centered-image {
-    width: 100%; /* Set width to 100% */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Set maximum width to 100% */
+    height: auto; /* Allow the height to adjust while maintaining aspect ratio */
     margin-top: 20px; /* Adjust as needed */
 }
 /* CSS for the gallery */
