@@ -59,6 +59,7 @@ header nav ul {
     right: 0;
     padding: 10px; /* Adjust padding as needed */
     text-align: right;
+    width: calc(100% - 20px); /* Adjust width to fit content and padding */
 }
 .blurb-text {
     font-size: 12px; /* Set font size to small */
