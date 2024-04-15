@@ -41,26 +41,33 @@ header nav ul {
 /**** CSS FOR CENTERING THE ALICE IMAGES ****/
 
 /**** CSS for centering the image *****/
+/* CSS for the main container */
 .container {
     position: relative;
     text-align: center;
 }
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+/* CSS for the image container */
+.image-container {
+    margin-bottom: 20px; /* Adjust as needed */
+}
+/* CSS for the image */
 .centered-image {
     max-width: 100%; /* Set maximum width to 100% */
-    height: auto; /* Allow the height to adjust while maintaining aspect ratio */
-    margin-top: 20px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
 }
-
-
-/**** CSS for the blurb *****/
+/* CSS for the blurb */
 .blurb {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px; /* Adjust padding as needed */
-    text-align: right;
-    width: calc(100% - 20px); /* Adjust width to fit content and padding */
+    width: 100%; /* Set width to 100% of its container */
+    text-align: right; /* Align the text to the right */
+    font-size: 12px; /* Set font size to small */
 }
+
 .blurb-text {
     font-size: 12px; /* Set font size to small */
     margin: 0; /* Remove default margin */
