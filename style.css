@@ -91,6 +91,7 @@ header nav ul {
     height: auto; /* Maintain aspect ratio */
     margin: 0 10px; /* Add spacing between images */
     transition: filter 0.3s ease; /* Smooth transition for filter property */
+    position: relative; /* Add position relative for absolute positioning of text */
 }
 
 .gallery img:hover {
@@ -108,7 +109,9 @@ header nav ul {
     padding: 5px 10px; /* Padding for text */
     border-radius: 5px; /* Rounded corners for text */
     z-index: 1; /* Ensure text appears above image */
+    pointer-events: none; /* Ensure hover doesn't affect hover state of image */
 }
+
 
 /* Responsive CSS */
 @media (max-width: 768px) { /* Adjust breakpoint as needed */
