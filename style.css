@@ -40,7 +40,7 @@ header nav ul {
 
 /**** CSS FOR CENTERING THE ALICE IMAGES ****/
 
-/* CSS for centering the image */
+/**** CSS for centering the image *****/
 .container {
     position: relative;
     text-align: center;
@@ -50,6 +50,19 @@ header nav ul {
     height: auto; /* Allow the height to adjust while maintaining aspect ratio */
     margin-top: 20px; /* Adjust as needed */
 }
+
+
+/**** CSS for the blurb *****/
+.blurb {
+    text-align: right;
+}
+.blurb-text {
+    font-size: 12px; /* Set font size to small */
+    margin: 0; /* Remove default margin */
+}
+
+
+
 /* CSS for the gallery */
 .gallery {
     display: flex;
