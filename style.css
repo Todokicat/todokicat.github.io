@@ -86,7 +86,7 @@ header nav ul {
 }
 
 .gallery img {
-    flex-grow: 1; /* Allow images to grow to fill available space */
+    width: 200px; /* Set the width to your desired size */
     height: auto; /* Maintain aspect ratio */
     margin: 0 10px; /* Add spacing between images */
 }
