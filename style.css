@@ -40,7 +40,7 @@ header nav ul {
     text-align: center;
 }
 .centered-image {
-    width: 100vw; /* Set width to 100% of viewport width */
+    width: 100%; /* Set width to 100% */
     height: auto; /* Maintain aspect ratio */
     margin-top: 20px; /* Adjust as needed */
 }
@@ -54,4 +54,18 @@ header nav ul {
     max-width: 100px; /* Example width for gallery images */
     max-height: 100px; /* Example height for gallery images */
     margin: 0 5px; /* Example margin between gallery images */
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .centered-image {
+        max-width: 90%; /* Adjust as needed */
+    }
+    .gallery {
+        flex-wrap: wrap; /* Allow gallery images to wrap on smaller screens */
+    }
+    .gallery img {
+        max-width: 45%; /* Adjust as needed */
+        margin: 5px; /* Adjust as needed */
+    }
 }
