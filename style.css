@@ -74,16 +74,18 @@ header nav ul {
 
 
 
-/* CSS for the gallery */
+/* CSS for the alice character exploration gallery */
 .gallery {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px; /* Adjust as needed */
+    max-width: 800px; /* Adjust max-width as needed */
 }
+
 .gallery img {
-    max-width: 100px; /* Example width for gallery images */
-    max-height: 100px; /* Example height for gallery images */
-    margin: 0 5px; /* Example margin between gallery images */
+    max-width: 100%;
+    height: auto;
+    margin: 5px; /* Adjust margin as needed */
 }
 
 /* Responsive CSS */
