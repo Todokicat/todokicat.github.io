@@ -47,10 +47,8 @@ header nav ul {
     text-align: center;
 }
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     position: relative;
+    display: inline-block;
 }
 /* CSS for the image container */
 .image-container {
@@ -63,10 +61,10 @@ header nav ul {
 }
 /* CSS for the blurb */
 .blurb {
-    width: 100%; /* Set width to 100% of its container */
-    text-align: right; /* Align the text to the right */
+    text-align: right;
     font-size: 12px; /* Set font size to small */
 }
+
 
 .blurb-text {
     font-size: 12px; /* Set font size to small */
