@@ -63,13 +63,13 @@ header nav ul {
 .blurb {
     text-align: right;
     font-size: 12px; /* Set font size to small */
-    color: rgb(26, 26, 52);
 }
 
 
 .blurb-text {
     font-size: 12px; /* Set font size to small */
     margin: 0; /* Remove default margin */
+    color: rgb(26, 26, 52)
 }
 
 
