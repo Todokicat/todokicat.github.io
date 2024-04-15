@@ -77,18 +77,17 @@ header nav ul {
 /* CSS for the alice character exploration gallery */
 .container {
     width: 100%;
-    overflow: hidden;
+    overflow: auto; /* Enable horizontal scrolling */
 }
 
 .gallery {
     display: flex;
     flex-wrap: nowrap; /* Prevent wrapping to next line */
-    overflow-x: auto; /* Enable horizontal scrolling */
 }
 
 .gallery img {
-    width: auto; /* Adjust image size as needed */
-    height: 200px; /* Adjust image height as needed */
+    flex-grow: 1; /* Allow images to grow to fill available space */
+    height: auto; /* Maintain aspect ratio */
     margin: 0 10px; /* Add spacing between images */
 }
 
