@@ -84,22 +84,18 @@ header nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative; /* Ensure absolute positioning relative to the gallery */
 }
 
 .gallery img {
     width: 200px; /* Set the width to your desired size */
     height: auto; /* Maintain aspect ratio */
     margin: 0 10px; /* Add spacing between images */
-    transition: filter 0.3s ease; /* Smooth transition for filter property */
     position: relative; /* Add position relative for absolute positioning of text */
 }
 
-.gallery img:hover {
-    filter: brightness(70%); /* Reduce brightness on hover */
-}
-
-.gallery img:hover::after {
-    content: attr(data-text); /* Display data-text attribute as centered text on hover */
+.gallery img::after {
+    content: attr(data-text); /* Display data-text attribute as centered text */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -108,8 +104,13 @@ header nav ul {
     color: white; /* Text color */
     padding: 5px 10px; /* Padding for text */
     border-radius: 5px; /* Rounded corners for text */
-    z-index: 1; /* Ensure text appears above image */
-    pointer-events: none; /* Ensure hover doesn't affect hover state of image */
+    z-index: -1; /* Ensure text appears below image */
+    opacity: 0; /* Initially hide the text */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity property */
+}
+
+.gallery img:hover::after {
+    opacity: 1; /* Show text on hover */
 }
 
 
