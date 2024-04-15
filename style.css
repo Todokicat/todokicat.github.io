@@ -82,13 +82,32 @@ header nav ul {
 
 .gallery {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping to next line */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .gallery img {
-    width: 300px; /* Set the width to your desired size */
+    width: 200px; /* Set the width to your desired size */
     height: auto; /* Maintain aspect ratio */
     margin: 0 10px; /* Add spacing between images */
+    transition: filter 0.3s ease; /* Smooth transition for filter property */
+}
+
+.gallery img:hover {
+    filter: brightness(70%); /* Reduce brightness on hover */
+}
+
+.gallery img:hover::after {
+    content: attr(alt); /* Display alt text as centered text on hover */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Background color for text */
+    color: white; /* Text color */
+    padding: 5px 10px; /* Padding for text */
+    border-radius: 5px; /* Rounded corners for text */
+    z-index: 1; /* Ensure text appears above image */
 }
 
 /* Responsive CSS */
