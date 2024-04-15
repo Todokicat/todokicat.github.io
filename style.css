@@ -31,3 +31,27 @@ header nav ul {
 .smaller-text {
     font-size: 0.4em;
 }
+
+
+
+/* CSS for centering the image */
+.container {
+    position: relative;
+    text-align: center;
+}
+.centered-image {
+    width: 100vw; /* Set width to 100% of viewport width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Adjust as needed */
+}
+/* CSS for the gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+.gallery img {
+    max-width: 100px; /* Example width for gallery images */
+    max-height: 100px; /* Example height for gallery images */
+    margin: 0 5px; /* Example margin between gallery images */
+}
