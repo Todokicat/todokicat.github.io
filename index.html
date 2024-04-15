@@ -64,34 +64,44 @@
             </ul>
         </nav>
     </header>
-    
-<!--CENTER IMAGE-->
+
+<!--TESTING HERE-->    
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Centered Image</title>
+    <title>Centered Image with Gallery</title>
     <style>
+        /* CSS for centering the container */
+        .container {
+            position: relative;
+            text-align: center;
+        }
         /* CSS for centering the image */
         .centered-image {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            /* CSS for resizing the image */
-            max-width: 50%; /* Adjust as needed */
-            max-height: 50%; /* Adjust as needed */
+            max-width: 50%;
+            max-height: 50%;
+            display: inline-block;
+            margin-top: 20px; /* Adjust as needed */
+        }
+        /* CSS for the gallery */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px; /* Adjust as needed */
+        }
+        .gallery img {
+            max-width: 100px; /* Example width for gallery images */
+            max-height: 100px; /* Example height for gallery images */
+            margin: 0 5px; /* Example margin between gallery images */
         }
     </style>
 </head>
 <body>
 
+<div class="container">
     <img class="centered-image" src="images/alicelineup.png" alt="Centered Image">
-
-</body>
-</html>
-
-<!--GALLERY-->
+</div>
 
 <div class="gallery">
     <img src="images/image1.png" alt="Image 1">
@@ -102,4 +112,3 @@
 
 </body>
 </html>
-
