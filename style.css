@@ -54,6 +54,10 @@ header nav ul {
 
 /**** CSS for the blurb *****/
 .blurb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px; /* Adjust padding as needed */
     text-align: right;
 }
 .blurb-text {
