@@ -1,93 +1,61 @@
-<!--HEADER BAR-->
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css"/>
-        <link rel="icon" type="image/jpg" href="favicon.png"/>
-        <title>Kyla Fulton | Portfolio</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-    <!--HEADER BAR TITLE-->
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/jpg" href="favicon.png"/>
+    <title>Kyla Fulton | Portfolio</title>
     <style>
-        ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          text-align: left;
+        /* CSS for header bar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333; /* Example background color */
+            color: white; /* Example text color */
+            padding: 10px 20px; /* Example padding */
         }
-        li {
-          display: inline-block;
-          margin-left: 10px; /* Add spacing between buttons if needed */
+        header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
         }
-      </style>
-<li>Kyla Fulton</li>
-
-<!----TEST BUTTONS--->
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aligned Buttons</title>
-  <style>
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-align: right;
-    }
-    li {
-      display: inline-block;
-      margin-left: 10px; /* Add spacing between buttons if needed */
-    }
-  </style>
+        header ul li {
+            margin-left: 10px;
+        }
+        /* CSS for image gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 20px; /* Example margin */
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
 
-<ul>
-  <li><button>Portfolio</button></li>
-  <li><button>Personal Work</button></li>
-  <li><button>Resume</button></li>
-</ul>
+<header>
+    <div>Kyla Fulton</div>
+    <nav>
+        <ul>
+            <li><button>Portfolio</button></li>
+            <li><button>Personal Work</button></li>
+            <li><button>Resume</button></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="gallery">
+    <img src="images/image1.jpg" alt="Image 1">
+    <img src="images/image2.jpg" alt="Image 2">
+    <img src="images/image3.jpg" alt="Image 3">
+    <!-- Add more images as needed -->
+</div>
 
 </body>
 </html>
-</ul>
-<!--END TEST BUTTONS---->
 
-
-
-<!--IMAGE GALLERY-->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Gallery</title>
-  <style>
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 10px;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
-    }
-  </style>
-</head>
-<body>
-
-    <div class="gallery">
-        <img src="images/image1.jpg" alt="Image 1">
-        <img src="images/image2.jpg" alt="Image 2">
-        <img src="images/image3.jpg" alt="Image 3">
-        <!-- Add more images as needed -->
-      </div>      
-
-</body>
-</html>
