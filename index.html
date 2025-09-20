@@ -92,8 +92,8 @@
 </head>
 <body>
 
-<!--ALICE LINEUP IMAGE-->
-<div class="carousel-container">
+<!-----------------------------------------------------------------HOME PAGE IMAGE CAROUSEL-->
+<div class="carousel-container" id="carousel">
     <div class="carousel">
         <img src="images/alicelineup.png" class="carousel-image active" alt="Alice Lineup 1">
         <img src="images/alicelineup2.png" class="carousel-image" alt="Alice Lineup 2">
@@ -101,37 +101,88 @@
         <!-- Add more images as needed -->
     </div>
 
-    <!-- Navigation buttons -->
+    <!-- Navigation arrows -->
     <button class="carousel-button prev">&#10094;</button>
     <button class="carousel-button next">&#10095;</button>
+
+    <!-- Navigation dots -->
+    <div class="carousel-dots"></div>
 </div>
+
 
 <!-- ✅ JavaScript just before this closing tag -->
 <script>
     const images = document.querySelectorAll('.carousel-image');
     const prevBtn = document.querySelector('.carousel-button.prev');
     const nextBtn = document.querySelector('.carousel-button.next');
+    const dotContainer = document.querySelector('.carousel-dots');
+    const carouselContainer = document.getElementById('carousel');
     let currentIndex = 0;
+    let autoplayInterval;
+
+    // Create dots dynamically
+    images.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        dot.addEventListener('click', () => {
+            stopAutoplay();
+            currentIndex = index;
+            showImage(currentIndex);
+            startAutoplay();
+        });
+        dotContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.carousel-dots .dot');
 
     function showImage(index) {
         images.forEach((img, i) => {
             img.classList.toggle('active', i === index);
         });
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
     }
 
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
         showImage(currentIndex);
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    }
+
+    function startAutoplay() {
+        autoplayInterval = setInterval(nextImage, 4000);
+    }
+
+    function stopAutoplay() {
+        clearInterval(autoplayInterval);
+    }
+
+    // Pause on hover
+    carouselContainer.addEventListener('mouseenter', stopAutoplay);
+    carouselContainer.addEventListener('mouseleave', startAutoplay);
+
+    // Button navigation
+    prevBtn.addEventListener('click', () => {
+        stopAutoplay();
+        prevImage();
+        startAutoplay();
     });
 
     nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
-        showImage(currentIndex);
+        stopAutoplay();
+        nextImage();
+        startAutoplay();
     });
 
+    // Init
     showImage(currentIndex);
+    startAutoplay();
 </script>
-
 </body>
 </html>
 
