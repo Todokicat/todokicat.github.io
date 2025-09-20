@@ -36,22 +36,23 @@ header nav ul {
 /* Carousel container */
 .carousel-container {
     position: relative;
-    max-width: 800px;
-    margin: 40px auto;
-    text-align: center;
-    overflow: hidden;
-}
-
-/* Carousel images */
-.carousel-image {
-    display: none;
     width: 100%;
-    height: auto;
-    transition: opacity 0.5s ease-in-out;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
-.carousel-image.active {
-    display: block;
+/* New track that will slide */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+/* All images sit side by side now */
+.carousel-image {
+    min-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* Navigation buttons */
@@ -80,8 +81,7 @@ header nav ul {
     background-color: rgba(0,0,0,0.8);
 }
 
-/*added carousel CSS*/
-/* Navigation dots container */
+/* Navigation dots */
 .carousel-dots {
     text-align: center;
     margin-top: 10px;

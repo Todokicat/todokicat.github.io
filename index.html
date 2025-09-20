@@ -94,7 +94,7 @@
 
 <!-----------------------------------------------------------------HOME PAGE IMAGE CAROUSEL-->
 <div class="carousel-container" id="carousel">
-    <div class="carousel">
+    <div class="carousel-track">
         <img src="images/alicelineup.png" class="carousel-image active" alt="Alice Lineup 1">
         <img src="images/alicelineup2.png" class="carousel-image" alt="Alice Lineup 2">
         <img src="images/alicelineup3.png" class="carousel-image" alt="Alice Lineup 3">
@@ -112,6 +112,7 @@
 
 <!-- ✅ JavaScript just before this closing tag -->
 <script>
+    const track = document.querySelector('.carousel-track');
     const images = document.querySelectorAll('.carousel-image');
     const prevBtn = document.querySelector('.carousel-button.prev');
     const nextBtn = document.querySelector('.carousel-button.next');
@@ -120,14 +121,14 @@
     let currentIndex = 0;
     let autoplayInterval;
 
-    // Create dots dynamically
+    // Create navigation dots
     images.forEach((_, index) => {
         const dot = document.createElement('span');
         dot.classList.add('dot');
         dot.addEventListener('click', () => {
             stopAutoplay();
             currentIndex = index;
-            showImage(currentIndex);
+            updateCarousel();
             startAutoplay();
         });
         dotContainer.appendChild(dot);
@@ -135,23 +136,23 @@
 
     const dots = document.querySelectorAll('.carousel-dots .dot');
 
-    function showImage(index) {
-        images.forEach((img, i) => {
-            img.classList.toggle('active', i === index);
-        });
+    function updateCarousel() {
+        const slideWidth = images[0].clientWidth;
+        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
         dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
+            dot.classList.toggle('active', i === currentIndex);
         });
     }
 
     function nextImage() {
         currentIndex = (currentIndex + 1) % images.length;
-        showImage(currentIndex);
+        updateCarousel();
     }
 
     function prevImage() {
         currentIndex = (currentIndex - 1 + images.length) % images.length;
-        showImage(currentIndex);
+        updateCarousel();
     }
 
     function startAutoplay() {
@@ -162,11 +163,6 @@
         clearInterval(autoplayInterval);
     }
 
-    // Pause on hover
-    carouselContainer.addEventListener('mouseenter', stopAutoplay);
-    carouselContainer.addEventListener('mouseleave', startAutoplay);
-
-    // Button navigation
     prevBtn.addEventListener('click', () => {
         stopAutoplay();
         prevImage();
@@ -179,10 +175,16 @@
         startAutoplay();
     });
 
+    // Pause on hover
+    carouselContainer.addEventListener('mouseenter', stopAutoplay);
+    carouselContainer.addEventListener('mouseleave', startAutoplay);
+
     // Init
-    showImage(currentIndex);
+    window.addEventListener('resize', updateCarousel); // Keep layout responsive
+    updateCarousel();
     startAutoplay();
 </script>
+
 </body>
 </html>
 
