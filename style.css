@@ -32,7 +32,53 @@ header nav ul {
     font-size: 0.6em;
 }
 
-/**** CSS FOR ALICE TITLE AND BLURB ****/
+/****---------------------------------------------- CSS FOR IMAGE CAROUSEL ****/
+/* Carousel container */
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Carousel images */
+.carousel-image {
+    display: none;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+/* Navigation buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0,0,0,0.8);
+}
 
 
 

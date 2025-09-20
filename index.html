@@ -93,20 +93,50 @@
 <body>
 
 <!--ALICE LINEUP IMAGE-->
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Centered Image with Blurb</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
-    <body>
-    
-    <div class="container">
-        <div class="content">
-            <div class="image-container">
-                <img class="centered-image" src="images/alicelineup.png" alt="Centered Image">
-            </div>
-<!--image blurb - alice lineup-->            
+<div class="carousel-container">
+    <div class="carousel">
+        <img src="images/alicelineup1.png" class="carousel-image active" alt="Alice Lineup 1">
+        <img src="images/alicelineup2.png" class="carousel-image" alt="Alice Lineup 2">
+        <img src="images/alicelineup3.png" class="carousel-image" alt="Alice Lineup 3">
+        <!-- Add more images as needed -->
+    </div>
+
+    <!-- Navigation buttons -->
+    <button class="carousel-button prev">&#10094;</button>
+    <button class="carousel-button next">&#10095;</button>
+</div>
+
+<!-- ✅ JavaScript just before this closing tag -->
+<script>
+    const images = document.querySelectorAll('.carousel-image');
+    const prevBtn = document.querySelector('.carousel-button.prev');
+    const nextBtn = document.querySelector('.carousel-button.next');
+    let currentIndex = 0;
+
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.classList.toggle('active', i === index);
+        });
+    }
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+        showImage(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        showImage(currentIndex);
+    });
+
+    showImage(currentIndex);
+</script>
+
+</body>
+</html>
+
+
+<!----------------------------------------------------------------------image blurb - alice lineup-->            
             <div class="blurb">
                 <p class="blurb-text">Character Lineup | Kyla Fulton | kyla.marie.fulton@gmail.com</p>
             </div>
