@@ -1,0 +1,195 @@
+html, header, body {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    color:pink;
+    font-family:'Pangolin', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header{
+    background-color: aqua;
+}
+
+header nav {
+    padding: 25px 0;
+    width: 1200px;
+    margin:0 auto;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* font size */
+
+.smaller-text {
+    font-size: 0.6em;
+}
+
+/****---------------------------------------------- CSS FOR IMAGE CAROUSEL ****/
+/* Carousel container */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* New track that will slide */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+/* All images sit side by side now */
+.carousel-image {
+    min-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Navigation buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Navigation dots */
+.carousel-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-dots .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+    background-color: #717171;
+}
+
+
+
+/**** CSS FOR CENTERING THE ALICE IMAGES ****/
+
+/**** CSS for centering the image *****/
+/* CSS for the main container */
+.container {
+    position: relative;
+    text-align: center;
+}
+.content {
+    position: relative;
+    display: inline-block;
+}
+/* CSS for the image container */
+.image-container {
+    margin-bottom: 20px; /* Adjust as needed */
+}
+/* CSS for the image */
+.centered-image {
+    max-width: 100%; /* Set maximum width to 100% */
+    height: auto; /* Maintain aspect ratio */
+}
+/* CSS for the blurb */
+.blurb {
+    text-align: right;
+    font-size: 12px; /* Set font size to small */
+}
+
+
+.blurb-text {
+    font-size: 17px; /* Set font size to small */
+    margin: 0; /* Remove default margin */
+    color: rgb(26, 26, 52)
+}
+
+/***GALLERY IMAGES AND HOVER***/
+
+/* CSS for the alice character exploration gallery */
+.container {
+    width: 100%;
+    overflow: auto; /* Enable horizontal scrolling */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative; /* Ensure absolute positioning relative to the gallery */
+}
+
+.gallery img {
+    width: 200px; /* Set the width to your desired size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Add spacing between images */
+    position: relative; /* Add position relative for absolute positioning of text */
+}
+
+.gallery img::after {
+    content: attr(data-text); /* Display data-text attribute as centered text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Background color for text */
+    color: white; /* Text color */
+    padding: 5px 10px; /* Padding for text */
+    border-radius: 5px; /* Rounded corners for text */
+    z-index: -1; /* Ensure text appears below image */
+    opacity: 0; /* Initially hide the text */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity property */
+}
+
+.gallery img:hover::after {
+    opacity: 1; /* Show text on hover */
+}
+
+
+/* Responsive CSS */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .centered-image {
+        max-width: 90%; /* Adjust as needed */
+    }
+    .gallery {
+        flex-wrap: wrap; /* Allow gallery images to wrap on smaller screens */
+    }
+    .gallery img {
+        max-width: 45%; /* Adjust as needed */
+        margin: 5px; /* Adjust as needed */
+    }
+}

@@ -1,0 +1,319 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Combined common styles to remove duplication while preserving effects */
+header, footer {
+    background-color: #333;
+    color: white;
+}
+
+header nav ul, footer ul, #carousel {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header nav ul, footer ul {
+    font-size: 1.15rem;
+}
+
+.social-tile {
+    max-height: 2rem;
+}
+
+#main-content-area aside a img {
+    width: auto;
+    min-width: 0;
+    min-height: 0;
+}
+
+header {
+    height: 3rem;
+    justify-content: space-between;
+    display: flex;
+    padding: 0.5rem 3rem;
+    
+
+    #branding-subhead {
+        display: none;
+    }
+
+    #mobile-menu-toggle {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    #mobile-menu-toggle-button {
+        cursor: pointer;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        user-select: none;
+    }
+
+    nav {
+        display: none;
+
+        ul {
+            background-color: #444;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+
+            li {
+                display: block;
+                border-top: solid thin white;
+                a {
+                    display: block;
+                    padding: 0.5em 3em;
+                    text-decoration: none;
+                    color: white;
+                }
+
+                .social-tile {
+                    margin-top: .4rem;
+                }
+            }
+            li:hover, li:focus {
+                background-color: #555;
+            }
+            li:active {
+                background-color: #ccc;
+                a {
+                    color: #333;
+                }
+            }
+            li.nav-divider {
+                display: none;
+            }
+        }
+    }
+
+    #mobile-menu-toggle:checked ~ nav {
+        display: flex;
+        position: absolute;
+        width: 100vw;
+        top: 4rem;
+        left: 0;
+    }
+
+    #branding {
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            margin: -0.25em 0 0 0;
+        }
+    }
+}
+
+body {
+    background-color: #ddddff;
+    background-image: url("./repeating-background.jpg");
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    main {
+        #main-content-area {
+            padding: 1.5em 3em;
+            background-color: white;
+            article {
+                h1 {
+                    margin-top: 0;
+                    color: #333;
+                    font-size: 2.7em;
+                    line-height: 1.15em;
+                    span {
+                        color: #ff00cc;
+                    }
+                }
+                p {
+                    text-align: justify;
+                    line-height: 1.5em;
+                }
+            }
+
+            aside {
+                margin-top: 2em;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                max-width: 100%;
+                place-items: center;
+                gap: 2rem;
+                
+                a img {
+                    max-width: 20vw;
+                }
+            }
+
+            .video-area {
+                border-block-start: 1px solid #ccc;
+                margin: 1.5em 0 0 0;
+
+                .video-info h2 {
+                    color: #333;
+                }
+
+                .embedded-video {
+                    max-width: 100%;
+                }
+            }
+        }
+
+    }
+
+    footer {
+        font-size: 0.75rem;
+
+        ul {
+            padding: 0.5rem 3rem;
+            display: flex;
+            flex-direction: row;
+            align-content: flex-end;
+
+            li {
+                padding: 0 0.25rem;
+
+                a {
+                    color: white;
+                }
+            }
+
+            li:first-child {
+                margin-inline-start: auto;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    body main #main-content-area aside {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        
+        a {
+            display: block;
+        }
+        
+                a img {
+                    max-width: 40vw;
+                }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body main #main-content-area {
+        .video-info {
+            margin-right: 1em;
+            
+            h2 {
+                margin-top: 0;
+            }
+        }
+        .video-area {
+            padding: 1.5em 0 0 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body main {
+        #main-content-area {
+            max-width: 50em;
+            margin: 0 auto;
+            aside {
+                display: flex;
+                justify-content: space-between;
+                gap: 15px;
+                
+                a {
+                    display: block;
+                }
+            }
+            article {
+                p {
+                    max-width: 50em;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    header {
+        height: auto;
+        #branding-subhead {
+            display: block;
+        }
+    }
+
+    header #mobile-menu-toggle-button {
+        display: none;
+    }
+
+    header nav{
+        justify-content: flex-end;
+        display: block;
+        margin: -0.5rem 0;
+
+        ul {
+            width: auto;
+            background-color: transparent;
+            height: 100%;
+            position: static !important;
+            top: auto !important;
+            flex-direction: row;
+            align-items: center;
+
+            li {
+                height: 100%;
+                border: none;
+                padding: 0 0.7rem;
+
+                a {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    padding: 0;
+                }
+                .social-tile {
+                    margin: auto 0;
+                }
+            }
+            li.nav-divider {
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+
+#carousel {
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+
+    li {
+        display: flex;
+
+        img {
+            width: 100vw;
+        }
+    }
+}
