@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Stacked Square Images</title>
+  <title>Responsive Stacked Images</title>
   <style>
+    /* Center everything vertically and horizontally */
     body {
       margin: 0;
       min-height: 100vh;
@@ -11,30 +12,44 @@
       justify-content: center;
       align-items: center;
       background: #f7f7f7;
+      font-family: sans-serif;
     }
 
+    /* Container for stacked images */
     .image-container {
       display: flex;
       flex-direction: column; /* stack vertically */
       gap: 20px;
+      align-items: center;
+      width: 90vw;             /* responsive container */
+      max-width: 800px;        /* cap maximum width */
     }
 
+    /* Responsive images */
     .image-container img {
-      width: 3606;
-      height: 1536;
-      object-fit: cover;      /* no squishing */
+      width: 100%;     /* fill container width */
+      height: auto;    /* maintain aspect ratio */
       border-radius: 6px;
       border: 1px solid #ccc;
       background: #fff;
       display: block;
+      object-fit: cover; /* optional: crops if needed */
+    }
+
+    /* Optional: limit height for very tall images */
+    .image-container img.large {
+      max-height: 400px;
     }
   </style>
 </head>
 <body>
 
   <div class="image-container">
-    <img src="./images/ShockConcept.png" alt="Shock Concept" />
-    <img src="./images/EnvironmentConcept.png" alt="Environment Concept" />
+    <!-- Large images, scaled to fit -->
+    <img src="./images/ShockConcept.png" alt="Shock Concept" class="large" />
+    <img src="./images/EnvironmentConcept.png" alt="Environment Concept" class="large" />
+
+    <!-- Placeholder square image -->
     <img src="https://fpoimg.com/144x144?text=Image+3" alt="Placeholder" />
   </div>
 
