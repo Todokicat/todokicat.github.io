@@ -23,7 +23,7 @@
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="">Concept</a></li>
                     <li><a href="">Storyboard</a></li>
-                    <li><a href="">Animation</a></li>
+                    <li><a href="">Animation</a></li>s
                     <li><a href="">Illustration</a></li>
                     <li class="nav-divider">|</li>
                     <li><a href="">About Me</a></li>
@@ -39,9 +39,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Responsive Stacked Images</title>
+  <title>Responsive Stacked Images with Captions</title>
   <style>
-    /* Center everything vertically and horizontally */
     body {
       margin: 0;
       min-height: 100vh;
@@ -52,42 +51,62 @@
       font-family: sans-serif;
     }
 
-    /* Container for stacked images */
     .image-container {
       display: flex;
-      flex-direction: column; /* stack vertically */
+      flex-direction: column;
       gap: 20px;
       align-items: center;
-      width: 90vw;             /* responsive container */
-      max-width: 800px;        /* cap maximum width */
+      width: 90vw;
+      max-width: 800px;
     }
 
-    /* Responsive images */
-    .image-container img {
-      width: 100%;     /* fill container width */
-      height: auto;    /* maintain aspect ratio */
+    /* Wrapper for each image + caption */
+    .image-wrapper {
+      position: relative;   /* needed for caption positioning */
+      width: 100%;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: auto;
       border-radius: 6px;
       border: 1px solid #ccc;
       background: #fff;
       display: block;
-      object-fit: cover; /* optional: crops if needed */
+      object-fit: cover;
+      max-height: 400px; /* optional for very tall images */
     }
 
-    /* Optional: limit height for very tall images */
-    .image-container img.large {
-      max-height: 400px;
+    /* Caption style */
+    .caption {
+      position: absolute;
+      bottom: 8px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+      color: #fff;
+      font-size: 14px;
+      padding: 4px 8px;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
 
   <div class="image-container">
-    <!-- Large images, scaled to fit -->
-    <img src="./images/ShockConcept.png" alt="Shock Concept" class="large" />
-    <img src="./images/EnvironmentConcept.png" alt="Environment Concept" class="large" />
+    <div class="image-wrapper">
+      <img src="./images/ShockConcept.png" alt="Shock Concept" />
+      <div class="caption">Shock Concept – Sci-Fi Device</div>
+    </div>
 
-    <!-- Placeholder square image -->
-    <img src="https://fpoimg.com/144x144?text=Image+3" alt="Placeholder" />
+    <div class="image-wrapper">
+      <img src="./images/EnvironmentConcept.png" alt="Environment Concept" />
+      <div class="caption">Environment Concept – Alien Landscape</div>
+    </div>
+
+    <div class="image-wrapper">
+      <img src="https://fpoimg.com/144x144?text=Image+3" alt="Placeholder" />
+      <div class="caption">Placeholder – Sample Image</div>
+    </div>
   </div>
 
 </body>
