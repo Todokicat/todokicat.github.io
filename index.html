@@ -1,262 +1,70 @@
-<!--PAGE HEIGHT-->
-
-<style>
-    /* Set the height of the page */
-    body {
-        height: 100vh; /* 100% of the viewport height */
-        margin: 0; /* Remove default margin */
-        padding: 0; /* Remove default padding */
-    }
-    /* Other CSS styles */
-</style>
-
-<!---CSS FONT FAMILY---->
-<!-- ✅ Add this line to import Nerko One font -->
-<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
-
-<!-- Your CSS file -->
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    
-<!--MAIN PAGE-->
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="icon" href="/images/favicon.ico" type="image/ico">
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-    <link rel="shortcut icon" href="favicon.ico">
-<title>Kyla Fulton | Portfolio</title>
-    <style>
-        /* CSS for header bar */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333; /* Example background color */
-            color: white; /* Example text color */
-            padding: 10px 20px; /* Example padding */
-        }
-        header ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        header ul li {
-            margin-left: 10px;
-        }
-        /* CSS for image gallery */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
-            margin-top: 20px; /* Example margin */
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div>
-            <div>Kyla Fulton</div>
-            <div class="subtext smaller-text">Character Design & Storyboard Artist</div>
-        </div>
-        <nav>
-            <ul>
-                <li><a class="nav-button" href="https://todokicat.github.io">Home</a></li>
-                <li><button>Concept</button></li>
-                <li><a class="nav-button" href="https://todokicat.github.io/storyboards">Storyboard</a></li>
-                <li><a class="nav-button" href="https://todokicat.github.io/animations">Animation</a></li>
-                <li><button>Illustration</button></li>  |
-                <li><a class="nav-button" href="https://todokicat.github.io/about">About Me</a></li>
-                <li><button>Resume</button></li>
-            </ul>
-        </nav>
-    </header>
-
-<!--PROJECT TITLE AND BLURB-->
-
-
-
-
-<!--TESTING HERE-->    
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Centered Image</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-
-<!-----------------------------------------------------------------HOME PAGE IMAGE CAROUSEL-->
-<div class="carousel-container" id="carousel">
-    <div class="carousel-track">
-        <img src="images/alicelineup.png" class="carousel-image active" alt="Alice Lineup 1">
-        <img src="images/alicelineup.png" class="carousel-image" alt="Alice Lineup 2">
-        <img src="images/alicelineup.png" class="carousel-image" alt="Alice Lineup 3">
-        <!-- Add more images as needed -->
-    </div>
-
-    <!-- Navigation arrows -->
-    <button class="carousel-button prev">&#10094;</button>
-    <button class="carousel-button next">&#10095;</button>
-
-    <!-- Navigation dots -->
-    <div class="carousel-dots"></div>
-</div>
-
-
-<!-- ✅ JavaScript just before this closing tag -->
-<script>
-    const track = document.querySelector('.carousel-track');
-    const images = document.querySelectorAll('.carousel-image');
-    const prevBtn = document.querySelector('.carousel-button.prev');
-    const nextBtn = document.querySelector('.carousel-button.next');
-    const dotContainer = document.querySelector('.carousel-dots');
-    const carouselContainer = document.getElementById('carousel');
-    let currentIndex = 0;
-    let autoplayInterval;
-
-    // Create navigation dots
-    images.forEach((_, index) => {
-        const dot = document.createElement('span');
-        dot.classList.add('dot');
-        dot.addEventListener('click', () => {
-            stopAutoplay();
-            currentIndex = index;
-            updateCarousel();
-            startAutoplay();
-        });
-        dotContainer.appendChild(dot);
-    });
-
-    const dots = document.querySelectorAll('.carousel-dots .dot');
-
-    function updateCarousel() {
-        const slideWidth = images[0].clientWidth;
-        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === currentIndex);
-        });
-    }
-
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateCarousel();
-    }
-
-    function prevImage() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateCarousel();
-    }
-
-    function startAutoplay() {
-        autoplayInterval = setInterval(nextImage, 4000);
-    }
-
-    function stopAutoplay() {
-        clearInterval(autoplayInterval);
-    }
-
-    prevBtn.addEventListener('click', () => {
-        stopAutoplay();
-        prevImage();
-        startAutoplay();
-    });
-
-    nextBtn.addEventListener('click', () => {
-        stopAutoplay();
-        nextImage();
-        startAutoplay();
-    });
-
-    // Pause on hover
-    carouselContainer.addEventListener('mouseenter', stopAutoplay);
-    carouselContainer.addEventListener('mouseleave', startAutoplay);
-
-    // Init
-    window.addEventListener('resize', updateCarousel); // Keep layout responsive
-    updateCarousel();
-    startAutoplay();
-</script>
-
-</body>
-</html>
-
-
-<!----------------------------------------------------------------------image blurb - alice lineup-->            
-            <div class="blurb">
-                <p class="blurb-text">Character Lineup | Kyla Fulton | kyla.marie.fulton@gmail.com</p>
-            </div>
-        </div>
-    </div>
-    
-    </body>
-    </html>    
-
-<!--ALICE EXPLORATION GALLERY-->
-    <!DOCTYPE html>
-    <html>
     <head>
-        <title>Centered Gallery</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+        <title>Kyla Fulton | Portfolio</title>
+        <script>
+            window.addEventListener('resize', function(event) {
+                document.getElementById("mobile-menu-toggle").checked = false;
+            });
+        </script>
     </head>
     <body>
-    
-    <div class="container">
-        <div class="gallery">
-            <img src="images/explorationalice.png" alt="Alice" data-text="Alice">
-            <img src="images/explorationqueen.png" alt="Queen" data-text="Queen of Hearts">
-            <img src="images/explorationalice.png" alt="Alice" data-text="Alice">
-            <img src="images/explorationqueen.png" alt="Queen" data-text="Queen of Hearts">
-            <img src="images/explorationalice.png" alt="Alice" data-text="Alice">
-        </div>
-        <!-- Close .gallery div before starting the blurb div -->
-        <div class="blurb">
-            <p class="blurb-text">Character Exploration | Kyla Fulton | kyla.marie.fulton@gmail.com</p>
-        </div>
-    </div>
-    
+        <header>
+            <input id="mobile-menu-toggle" type="checkbox" />
+            <div id="branding">
+                <h1>Kyla Fulton</h1>
+                <p id="branding-subhead">Character Design & Storyboard Artist</p>
+            </div>
+            <nav class="desktop-navigation">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Concept</a></li>
+                    <li><a href="">Storyboard</a></li>
+                    <li><a href="">Animation</a></li>
+                    <li><a href="">Illustration</a></li>
+                    <li class="nav-divider">|</li>
+                    <li><a href="">About Me</a></li>
+                    <li><a href="">Resume</a></li>
+                    <li><a href=""><img class="social-tile" src="linkedin-logo.png" /></a></li>
+                </ul>
+            </nav>
+            <label for="mobile-menu-toggle" id="mobile-menu-toggle-button">&#9776;</label>
+        </header>
+        <ul id="carousel">
+            <li><img src="./alicelineup.png" /></li>
+            <li><img src="./alicelineup.png" /></li>
+            <li><img src="./alicelineup.png" /></li>
+        </ul>
+        <main>
+            <div id="main-content-area">
+                <article>
+                    <h1>I like making concepts come to <span>life.</span></h1>
+                    <p>I am a Digital Animation student. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec porta lacus. Suspendisse vitae nunc sagittis, posuere est vel, tristique velit. Nunc lectus est, feugiat at eros sit amet, congue dapibus nisi. Morbi pharetra mauris purus, vitae rutrum sapien tempus quis.</p>
+                    <p>Ut convallis semper justo, eleifend vulputate lectus gravida in. Ut tempor ex sagittis, elementum libero a, feugiat purus. Praesent sed accumsan neque. Suspendisse ac tortor non risus fringilla molestie eget sit amet lacus. Pellentesque dignissim sagittis eleifend. Fusce tempus bibendum turpis, vel aliquam orci sollicitudin eu. Proin maximus leo id pharetra rutrum. Praesent molestie, urna id posuere pretium, dolor massa tempus diam, eget pharetra dui dui id nisi.</p>
+                </article>
+                <aside>
+                    <a href=""><img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" /></a>
+                    <a href=""><img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" /></a>
+                    <a href=""><img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" /></a>
+                    <a href=""><img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" /></a>
+                </aside>
+                <div class="video-area">
+                    <div class="video-info">
+                        <h2>Highlight Reel</h2>
+                        <p>This is a synopsis of the demo reel.</p>
+                    </div>
+                    <iframe class="embedded-video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?si=_T8lB9BNbA8yRucO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <ul>
+                <li>Kyla Fulton</li>
+                <li>|</li>
+                <li><a href="mailto: kyla.marie.fulton@gmail.com">kyla.marie.fulton@gmail.com</a></li>
+            </ul>
+        </footer>
     </body>
-    </html>
-    
-
-    <!--ALICE CONCEPT ART STUUFFF-->
-
-<!--ALICE LINEUP IMAGE-->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Centered Image with Blurb</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-
-<div class="container">
-    <div class="content">
-        <div class="image-container">
-            <img class="centered-image" src="images/e.png" alt="Centered Image">
-        </div>
-<!--image blurb - alice lineup-->            
-        <div class="blurb">
-            <p class="blurb-text">Concept Art | Kyla Fulton | kyla.marie.fulton@gmail.com</p>
-        </div>
-
-<!--bottom page text-->            
-<div class="blurb">
-    <p class="blurb-text">Kyla Fulton | kyla.marie.fulton@gmail.com | Updated September 2025</p>
-</div>
-
-    </div>
-</div>
-
-</body>
-</html>    
+</html>
