@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Centered Images</title>
+  <title>Stacked Square Images</title>
   <style>
     body {
       margin: 0;
@@ -15,24 +15,27 @@
 
     .image-container {
       display: flex;
+      flex-direction: column; /* stack vertically */
       gap: 20px;
     }
 
     .image-container img {
       width: 144px;
       height: 144px;
+      object-fit: cover;      /* no squishing */
       border-radius: 6px;
       border: 1px solid #ccc;
       background: #fff;
+      display: block;
     }
   </style>
 </head>
 <body>
 
   <div class="image-container">
-    <img src="./images/ShockConcept.png" alt="Image 1" />
-    <img src="./images/EnvironmentConcept.png" alt="Image 2" />
-    <img src="https://fpoimg.com/144x144?text=Image+3" alt="Image 3" />
+    <img src="./images/ShockConcept.png" alt="Shock Concept" />
+    <img src="./images/EnvironmentConcept.png" alt="Environment Concept" />
+    <img src="https://fpoimg.com/144x144?text=Image+3" alt="Placeholder" />
   </div>
 
 </body>
