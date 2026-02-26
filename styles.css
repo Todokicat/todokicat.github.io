@@ -36,7 +36,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: white;
+    background: transparent;
     height: 3rem;
     justify-content: space-between;
     display: flex;
@@ -121,6 +121,7 @@ header {
 }
 
 body {
+    padding-top: 4rem;
     background-color: #ddddff;
     background-image: url("./repeating-background.jpg");
     margin: 0;
