@@ -36,7 +36,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: transparent;
+    background: black;
     height: 3rem;
     justify-content: space-between;
     display: flex;
