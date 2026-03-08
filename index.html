@@ -224,14 +224,53 @@ startAuto()
 </body>
 </html>
 <!---END CAROUSEL-->
-        <main>
-            <div id="main-content-area">
-                <article>
-                    <h1>I like making concepts come to <span>life</span></h1>
-                    <p>Hello! My name is Kyla Fulton and I'm a BFA Digital Animation major. I enjoy the storytelling process, whether it be through writing, storyboards, animation, etc.</p>
-                    <p>Thank you for stopping by and checking out what I do!</p>
-                </article>
-                <aside>
+        <style>
+/* Flex container for article and aside */
+#main-content-area {
+  display: flex;
+  gap: 40px;           /* space between text and image */
+  align-items: flex-start;
+  padding: 40px;
+  max-width: 1000px;   /* optional page width */
+  margin: 0 auto;      /* center container */
+  flex-wrap: wrap;     /* allows wrap on small screens */
+}
+
+/* Article styling */
+#main-content-area article {
+  flex: 1 1 400px;     /* grow/shrink, min width 400px */
+}
+
+/* Optional styling for heading */
+#main-content-area h1 span {
+  color: #0ff;
+}
+
+/* Aside image styling */
+#main-content-area aside {
+  flex: 0 0 300px;     /* fixed width for image column */
+}
+
+#main-content-area aside img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+</style>
+
+<main>
+  <div id="main-content-area">
+    <article>
+      <h1>I like making concepts come to <span>life</span></h1>
+      <p>Hello! My name is Kyla Fulton and I'm a BFA Digital Animation major. I enjoy the storytelling process, whether it be through writing, storyboards, animation, etc.</p>
+      <p>Thank you for stopping by and checking out what I do!</p>
+    </article>
+    <aside>
+      <img src="https://fpoimg.com/300x300?text=Your+Image" alt="Profile or Concept Art" />
+    </aside>
+  </div>
+</main>
               <!----- holographic code start ---->    
 <style>
 /* Horizontal container for cards */
