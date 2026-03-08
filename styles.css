@@ -122,6 +122,16 @@ header {
     }
 }
 
+/*BEGIN CAROUSEL CSS??*/
+body{
+    margin:0;
+}
+
+.carousel-container{
+    width:100%;
+}
+/*END CAROUSEL CSS??*/
+
 body {
     background-color: #ddddff;
     background-image: url("./repeating-background.jpg");
