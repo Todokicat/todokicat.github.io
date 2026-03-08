@@ -233,47 +233,36 @@ startAuto()
                 </article>
                 <aside>
               <!----- holographic code start ---->    
-                    <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Holographic Card</title>
-
 <style>
-body {
-  margin: 0;
-}
-
-.holographic-container {
+/* Container for small cards */
+.card-grid {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  padding: 20px;
   background: #000;
 }
 
-.holographic-card {
-  width: 300px;
-  height: 200px;
-  background: #111;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Reusable holographic card style for small cards */
+.holographic-card-small {
   position: relative;
   overflow: hidden;
   border-radius: 15px;
   transition: all 0.5s ease;
+  width: 144px;
+  height: 144px;
+  flex-shrink: 0;
 }
 
-.holographic-card h2 {
-  color: #0ff;
-  font-size: 2rem;
-  position: relative;
-  z-index: 2;
+.holographic-card-small img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 15px;
 }
 
-.holographic-card::before {
+.holographic-card-small::before {
   content: '';
   position: absolute;
   top: -50%;
@@ -291,35 +280,24 @@ body {
   opacity: 0;
 }
 
-.holographic-card:hover {
+.holographic-card-small:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0,255,255,0.5);
+  box-shadow: 0 0 15px rgba(0,255,255,0.5);
 }
 
-.holographic-card:hover::before {
+.holographic-card-small:hover::before {
   opacity: 1;
   transform: rotate(-45deg) translateY(100%);
 }
 </style>
 
-</head>
-<body>
-
-<div class="holographic-container">
-  <div class="holographic-card">
-    <h2>Concept Art</h2>
-  </div>
+<div class="card-grid">
+  <a class="holographic-card-small" href="#"><img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" /></a>
+  <a class="holographic-card-small" href="#"><img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" /></a>
+  <a class="holographic-card-small" href="storyboards.html"><img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" /></a>
+  <a class="holographic-card-small" href="concepts.html"><img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" /></a>
 </div>
-
-</body>
-</html>
-              <!----- holographic code end ---->    
-
-                    <a href=""><img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" /></a>
-                    <a href=""><img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" /></a>
-                    <a href="storyboards.html"><img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" /></a>
-                    <a href="concepts.html"><img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" /></a>
-                </aside>
+<!--TESTING TWO ENDS--->
                 <div class="video-area">
                     <div class="video-info">
                         <h2>Highlight Reel</h2>
