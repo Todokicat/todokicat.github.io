@@ -35,12 +35,82 @@
             <label for="mobile-menu-toggle" id="mobile-menu-toggle-button">&#9776;</label>
         </header>
         <!-- Navigation ends here -->
+<!--START CAROUSEL-->
+        <!DOCTYPE html>
+<html>
+<head>
+<title>Simple Carousel</title>
 
-        <ul id="carousel">
-            <li><img src="./alicelineup.png" /></li>
-            <li><img src="./alicelineup.png" /></li>
-            <li><img src="./alicelineup.png" /></li>
-        </ul>
+<style>
+body{
+    font-family: Arial;
+}
+
+#carousel{
+    width: 400px;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    margin: auto;
+    display: flex;
+}
+
+#carousel li{
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+#carousel img{
+    width: 100%;
+    display: block;
+}
+
+.controls{
+    text-align:center;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<ul id="carousel">
+    <li><img src="./alicelineup.png"></li>
+    <li><img src="./alicelineup.png"></li>
+    <li><img src="./alicelineup.png"></li>
+</ul>
+
+<div class="controls">
+    <button onclick="prev()">Prev</button>
+    <button onclick="next()">Next</button>
+</div>
+
+<script>
+let index = 0;
+const carousel = document.getElementById("carousel");
+const slides = carousel.children;
+const total = slides.length;
+
+function updateCarousel(){
+    for(let i=0;i<total;i++){
+        slides[i].style.transform = `translateX(-${index*100}%)`;
+    }
+}
+
+function next(){
+    index = (index + 1) % total;
+    updateCarousel();
+}
+
+function prev(){
+    index = (index - 1 + total) % total;
+    updateCarousel();
+}
+</script>
+
+</body>
+</html>
+<!---END CAROUSEL-->
         <main>
             <div id="main-content-area">
                 <article>
