@@ -121,6 +121,19 @@ header {
         }
     }
 }
+/*NAVIBAR LOGO SIZE BEGINS*/
+#branding {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.branding-logo {
+    height: 40px;   /* adjust to fit your navbar */
+    width: auto;    /* keeps aspect ratio */
+}
+/*NAVIBAR LOGO SIZE ENDS*/
+
 
 /*BEGIN CAROUSEL CSS??*/
 body{
