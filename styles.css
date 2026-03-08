@@ -135,16 +135,16 @@ header {
 /*NAVIBAR LOGO SIZE ENDS*/
 
 /*NAVIBAR STYLE BUTTONS ANIMATION BEGINS*/
-.desktop-navigation a {
+.desktop-navigation ul li a {
   position: relative;
   display: inline-block;
-  color: white;
   text-decoration: none;
+  color: inherit;
 }
 
-/* lines */
-.desktop-navigation a::before,
-.desktop-navigation a::after {
+/* create lines */
+.desktop-navigation ul li a::before,
+.desktop-navigation ul li a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -156,20 +156,20 @@ header {
 }
 
 /* top line */
-.desktop-navigation a::before {
-  top: -5px;
+.desktop-navigation ul li a::before {
+  top: -4px;
   transform-origin: left;
 }
 
 /* bottom line */
-.desktop-navigation a::after {
-  bottom: -5px;
+.desktop-navigation ul li a::after {
+  bottom: -4px;
   transform-origin: right;
 }
 
 /* hover animation */
-.desktop-navigation a:hover::before,
-.desktop-navigation a:hover::after {
+.desktop-navigation ul li a:hover::before,
+.desktop-navigation ul li a:hover::after {
   transform: scaleX(1);
 }
 /*NAVIBAR STYLE BUTTONS ANIMATION END*/
