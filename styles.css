@@ -134,39 +134,7 @@ header {
 }
 /*NAVIBAR LOGO SIZE ENDS*/
 
-/*NAVIBAR STYLE BUTTONS ANIMATION BEGINS*/
-.desktop-navigation ul li {
-  display: flex;
-  align-items: center;
-}
 
-.desktop-navigation ul li a {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  color: inherit;
-  padding: 8px 12px; /* keeps text centered in button area */
-}
-
-/* underline */
-.desktop-navigation ul li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, #ff0000, #00ffff);
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.35s ease;
-}
-
-/* hover animation */
-.desktop-navigation ul li a:hover::after {
-  transform: scaleX(1);
-}
-/*NAVIBAR STYLE BUTTONS ANIMATION END*/
 
 /*BEGIN CAROUSEL CSS??*/
 body{
