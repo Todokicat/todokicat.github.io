@@ -135,6 +135,11 @@ header {
 /*NAVIBAR LOGO SIZE ENDS*/
 
 /*NAVIBAR STYLE BUTTONS ANIMATION BEGINS*/
+.desktop-navigation ul li {
+  display: flex;
+  align-items: center;
+}
+
 .desktop-navigation ul li a {
   position: relative;
   display: inline-block;
