@@ -234,15 +234,14 @@ startAuto()
                 <aside>
               <!----- holographic code start ---->    
 <style>
-/* Horizontal container for small image cards */
+/* Horizontal container for cards */
 .card-row {
   display: flex;
-  gap: 20px;           /* space between cards */
+  gap: 20px;
   justify-content: center; 
   align-items: center;
-  padding: 20px;
-  overflow-x: auto;    /* allows horizontal scroll if viewport is small */
-  background: #000;    /* optional page background */
+  padding: 40px;
+  background: #000; /* page background */
 }
 
 /* Holographic card effect */
@@ -250,18 +249,40 @@ startAuto()
   position: relative;
   display: block;
   width: 144px;
-  height: 144px;
+  height: 200px; /* taller height */
   overflow: hidden;
   border-radius: 15px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  flex-shrink: 0;      /* prevents shrinking in row */
+  flex-shrink: 0;
+  text-decoration: none;
+  color: #0ff; /* default text color */
+  font-family: sans-serif;
 }
 
+/* Image fills top portion of card */
 .card-row a img {
   width: 100%;
-  height: 100%;
+  height: 70%; /* top 70% of card height */
   display: block;
-  border-radius: 15px;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+
+/* Text overlay at bottom */
+.card-row a .card-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%; /* bottom 30% of card */
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Text hover effect */
+.card-row a:hover .card-text {
+  color: #fff;      /* changes color on hover */
+  font-size: 1.2rem; /* slightly expands text */
+  font-weight: bold;
 }
 
 /* Shine overlay */
@@ -296,12 +317,23 @@ startAuto()
 </style>
 
 <div class="card-row">
-  <a href="#"><img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" /></a>
-  <a href="#"><img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" /></a>
-  <a href="storyboards.html"><img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" /></a>
-  <a href="concepts.html"><img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" /></a>
+  <a href="#">
+    <img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" />
+    <div class="card-text">Preview 1</div>
+  </a>
+  <a href="#">
+    <img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" />
+    <div class="card-text">Preview 2</div>
+  </a>
+  <a href="storyboards.html">
+    <img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" />
+    <div class="card-text">Storyboards</div>
+  </a>
+  <a href="concepts.html">
+    <img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" />
+    <div class="card-text">Concepts</div>
+  </a>
 </div>
-</aside>
 <!--TESTING TWO ENDS--->
                 <div class="video-area">
                     <div class="video-info">
