@@ -147,8 +147,8 @@ body{
 /*END CAROUSEL CSS??*/
 
 body {
-    background-color: #ddddff;
-    background-image: url("./repeating-background.jpg");
+    background-color: #000000;
+    /*background-image: url("./repeating-background.jpg");*/
     margin: 0;
     padding: 0;
     padding-top: 4rem;
