@@ -1,5 +1,6 @@
 html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -37,10 +38,10 @@ header {
     width: 100%;
     z-index: 1000;
     background: black;
-    height: 3rem;
+    height: 60px;
     justify-content: space-between;
     display: flex;
-    padding: 0.5rem 0;
+    padding: 5px 0;
     
 
     #branding-subhead {
@@ -101,6 +102,12 @@ header {
                 a:hover::before {
                 transform-origin: left;
                 transform: scaleX(1);
+                }
+
+                a.linkedin::before,
+                a.youtube::before {
+                    transition: none;
+                    background-color: transparent;
                 }
 
                 .social-tile {
@@ -170,8 +177,8 @@ body {
     background-color: #000000;
     /*background-image: url("./repeating-background.jpg");*/
     margin: 0;
+    margin-top: 70px;
     padding: 0;
-    padding-top: 4rem;
     display: flex;
     flex-direction: column;
 
@@ -190,7 +197,6 @@ body {
                     }
                 }
                 p {
-                    text-align: justify;
                     line-height: 1.5em;
                 }
             }
@@ -279,6 +285,9 @@ body {
             flex-direction: row;
             justify-content: space-between;
         }
+        .card-row {
+            width: 100%;
+        }
     }
 }
 
@@ -307,7 +316,6 @@ body {
 
 @media only screen and (min-width: 1280px) {
     header {
-        height: auto;
         #branding-subhead {
             display: block;
         }
