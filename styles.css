@@ -68,7 +68,7 @@ header {
         display: none;
 
         ul {
-            background-color: #444;
+            background-color: #000000;
             width: 100vw;
             display: flex;
             flex-direction: column;
@@ -88,12 +88,12 @@ header {
                 }
             }
             li:hover, li:focus {
-                background-color: #555;
+                background-color: #000000;
             }
             li:active {
-                background-color: #ccc;
+                background-color: #000000;
                 a {
-                    color: #333;
+                    color: #ffffff;
                 }
             }
             li.nav-divider {
@@ -193,7 +193,7 @@ body {
                 margin: 1.5em 0 0 0;
 
                 .video-info h2 {
-                    color: #333;
+                    color: #ffffff;
                 }
 
                 .embedded-video {
