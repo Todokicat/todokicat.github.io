@@ -5,6 +5,10 @@ html {
     padding: 0;
 }
 
+header {
+    border-block-end: thin solid #444;
+}
+
 /* Combined common styles to remove duplication while preserving effects */
 header, footer {
     background-color: #333;
@@ -108,6 +112,11 @@ header {
                 a.youtube::before {
                     transition: none;
                     background-color: transparent;
+                }
+
+                a.current::before {
+                    transform: scaleX(1);
+                    transition: none;
                 }
 
                 .social-tile {
