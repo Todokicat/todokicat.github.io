@@ -10,6 +10,30 @@
                 document.getElementById("mobile-menu-toggle").checked = false;
             });
         </script>
+        <style>
+            @media only screen and (min-width: 1024px) {
+                .speakerdeck-description {
+                    h2 {
+                        font-size: 2rem;
+                    }
+                }
+            }
+            .speakerdeck-description h2 {
+                margin-bottom: -.75rem;
+            }
+            .speakerdeck-iframe {
+                max-height: 600px;
+            }
+            .speakerdeck-frames {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: start;
+                gap: 5px;
+                img {
+                    width: 19.2%;
+                }
+            }
+        </style>
     </head>
     <body>
         <!-- Navigation starts here -->
@@ -50,6 +74,29 @@
     <label for="mobile-menu-toggle" id="mobile-menu-toggle-button">&#9776;</label>
 </header>
         <!-- Navigation ends here -->
+
+<main>
+    <div id="main-content-area">
+        <article class="speakerdeck-container">
+            <div class="speakerdeck-description">
+                <h2>My Speakerdeck presentation</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+            <iframe class="speakerdeck-iframe" style="border: 0px; background: rgba(0, 0, 0, 0.1) padding-box; margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 724;" frameborder="0" src="https://speakerdeck.com/player/32ce50743dd74da5bf765688277e168c" title="test" allowfullscreen="true" data-ratio="0.7734806629834254"></iframe>
+            <div class="speakerdeck-frames">
+                <img src="https://fpoimg.com/300x200?text=Your+Image" />
+                <img src="https://fpoimg.com/300x200?text=Your+Image" />
+                <img src="https://fpoimg.com/300x200?text=Your+Image" />
+                <img src="https://fpoimg.com/300x200?text=Your+Image" />
+                <img src="https://fpoimg.com/300x200?text=Your+Image" />
+                <img src="https://fpoimg.com/300x200?text=Your+Image" />
+                <img src="https://fpoimg.com/300x200?text=Your+Image" />
+                <img src="https://fpoimg.com/300x200?text=Your+Image" />
+                <img src="https://fpoimg.com/300x200?text=Your+Image" />
+            </div>
+        </article>
+    </div>
+</main>
 
 <!--- VIDEO SECTION --->
 <section class="video-section" style="text-align: center; margin-top: 120px;">
