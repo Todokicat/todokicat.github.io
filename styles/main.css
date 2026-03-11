@@ -22,7 +22,7 @@ header nav ul, footer ul, #carousel {
 }
 
 header nav ul, footer ul {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
 }
 
 .social-tile {
@@ -79,6 +79,7 @@ header {
             flex-direction: column;
 
             li {
+                white-space: nowrap;
                 display: block;
                 border-top: solid thin white;
                 a {
@@ -90,22 +91,22 @@ header {
                 }
 
                 a::before {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 4px;
-                border-radius: 4px;
-                background-color: #cc99ff;
-                bottom: 10px;
-                left: 0;
-                transform-origin: right;
-                transform: scaleX(0);
-                transition: transform .3s ease-in-out;
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 4px;
+                    border-radius: 4px;
+                    background-color: #cc99ff;
+                    bottom: 0;
+                    left: 0;
+                    transform-origin: right;
+                    transform: scaleX(0);
+                    transition: transform .3s ease-in-out;
                 }
 
                 a:hover::before {
-                transform-origin: left;
-                transform: scaleX(1);
+                    transform-origin: left;
+                    transform: scaleX(1);
                 }
 
                 a.linkedin::before,
@@ -184,7 +185,6 @@ body{
 
 body {
     background-color: #000000;
-    /*background-image: url("./repeating-background.jpg");*/
     margin: 0;
     margin-top: 70px;
     padding: 0;
@@ -324,6 +324,9 @@ body {
 }
 
 @media only screen and (min-width: 1280px) {
+    body nav ul li a::before {
+        bottom: 10px;
+    }
     header {
         #branding-subhead {
             display: block;
