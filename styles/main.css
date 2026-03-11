@@ -10,10 +10,6 @@ header {
 }
 
 /* Combined common styles to remove duplication while preserving effects */
-header, footer {
-    background-color: #333;
-    color: white;
-}
 
 header nav ul, footer ul, #carousel {
     margin: 0;
@@ -77,6 +73,7 @@ header {
             width: 100vw;
             display: flex;
             flex-direction: column;
+            border-bottom: solid thin white;
 
             li {
                 white-space: nowrap;
@@ -241,7 +238,7 @@ body {
 
     footer {
         font-size: 0.75rem;
-
+        border-top: thin solid #444;
         ul {
             padding: 0.5rem 3rem;
             display: flex;
@@ -350,6 +347,7 @@ body {
             top: auto !important;
             flex-direction: row;
             align-items: center;
+            border-bottom: none;
 
             li {
                 height: 100%;
