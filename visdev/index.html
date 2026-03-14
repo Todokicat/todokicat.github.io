@@ -54,13 +54,17 @@
   <!-- Navigation ends here -->
 
   <style>
+    #visdev-banner {
+      width: 100%;
+    }
+
     .image-container {
       display: flex;
       flex-direction: column;
       gap: 20px;
       align-items: center;
-      width: 90vw;
-      max-width: 800px;
+      max-width: 1024px;
+      margin: 0 auto;
     }
 
     /* Wrapper for each image + caption */
@@ -98,31 +102,9 @@
 
   <body>
     <main>
+      <img id="visdev-banner" src="/images/alicelineup.png" />
       <div id="main-content-area">
-
         <!--START CAROUSEL-->
-        <div class="carousel-container" id="carousel">
-
-          <div class="carousel-track" id="track">
-            <div class="carousel-slide">
-              <img src="/images/alicelineup.png">
-            </div>
-            <div class="carousel-slide">
-              <img src="/images/alicelineup.png">
-            </div>
-            <div class="carousel-slide">
-              <img src="/images/alicelineup.png">
-            </div>
-          </div>
-
-          <div class="dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-
-        </div>
-
         <!---END CAROUSEL-->
 
 
@@ -195,16 +177,15 @@
                 <div class="caption">Alice Character lineup – kyla.marie.fulton@gmail.com</div>
               </div>
 
-
             </div>
           </div>
     </main>
     <footer>
-        <ul>
-            <li>Kyla Fulton</li>
-            <li>|</li>
-            <li><a href="mailto: kyla.marie.fulton@gmail.com">kyla.marie.fulton@gmail.com</a></li>
-        </ul>
+      <ul>
+        <li>Kyla Fulton</li>
+        <li>|</li>
+        <li><a href="mailto: kyla.marie.fulton@gmail.com">kyla.marie.fulton@gmail.com</a></li>
+      </ul>
     </footer>
   </body>
 
