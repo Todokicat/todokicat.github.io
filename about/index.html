@@ -10,6 +10,32 @@
             document.getElementById("mobile-menu-toggle").checked = false;
         });
     </script>
+    <style>
+        .about-me {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+        .about-me-description {
+            flex: 1;
+            h1 span {
+                color: #cc99ff;
+            }
+        }
+        .about-me-image {
+            flex: 0 0 300px;
+        }
+        .contact-me-button {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #553b6b;
+            border-radius: 6px;
+            padding: 10px;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -52,45 +78,27 @@
         <label for="mobile-menu-toggle" id="mobile-menu-toggle-button">&#9776;</label>
     </header>
     <!-- Navigation ends here -->
-
     <main>
-        <div class="main-content-area">
-            <!--- VIDEO SECTION --->
-            <section class="video-section" style="text-align: center; margin-top: 120px;">
-
-                <!-- First Video -->
-                <h2 class="video-title">Cubibibibism Animatic Video</h2>
-
-                <div style="display: flex; justify-content: center; margin: 40px 0;">
-                    <iframe width="900" height="500" src="https://www.youtube.com/embed/NG8DnEAXU9w"
-                        title="Cubibibibism Animatic Video" frameborder="0" allowfullscreen>
-                    </iframe>
+        <div id="main-content-area">
+            <article class="about-me">
+                <div class="about-me-description">
+                    <h1>This is <span>me.</span></h1>
+                    <p>Description text. This sentence is also about description text. So is this one. Description text. This sentence is also about description text. So is this one.</p>
+                    <p>Description text. This sentence is also about description text. So is this one. Description text. This sentence is also about description text. So is this one.</p>
+                    <p>Description text. This sentence is also about description text. So is this one.</p>
+                    <p><a class="contact-me-button" href="mailto:kyla.marie.fulton@gmail.com">Contact Me</a></p>
                 </div>
-
-                <p style="max-width: 900px; margin: 0 auto 80px auto;">
-                    A desktop helper has been pushed to her limit.
-                </p>
-
-
-                <!-- Second Video -->
-                <h2 class="video-title">The End</h2>
-
-                <div style="display: flex; justify-content: center; margin: 40px 0;">
-                    <iframe width="900" height="500" src="https://www.youtube.com/embed/4muvu720L5w"
-                        title="Second Animatic Video" frameborder="0" allowfullscreen>
-                    </iframe>
-                </div>
-
-                <p style="max-width: 900px; margin: 0 auto;">
-
-                </p>
-                Magical girls fight against invaders.
-            </section>
-
-            <section class="video-section" style="text-align: center; margin-bottom: 120px;"></section>
+                <img class="about-me-image" src="https://fpoimg.com/300x600?text=Your+Image" alt="Profile Illustration" style="width:300px; height:auto;">
+            </article>
         </div>
     </main>
-
+    <footer>
+        <ul>
+            <li>Kyla Fulton</li>
+            <li>|</li>
+            <li><a href="mailto: kyla.marie.fulton@gmail.com">kyla.marie.fulton@gmail.com</a></li>
+        </ul>
+    </footer>
 </body>
 
 </html>
