@@ -14,6 +14,136 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
+    <style>
+        /* Article styling */
+        #main-content-area article {
+            flex: 1 1 400px;
+            /* grow/shrink, min width 400px */
+        }
+
+        /* Optional styling for heading */
+        #main-content-area h1 span {
+            color: #0ff;
+        }
+
+        /* Aside image styling */
+        #main-content-area aside {
+            flex: 0 0 300px;
+            /* fixed width for image column */
+        }
+
+        #main-content-area aside img {
+            height: auto;
+            border-radius: 15px;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+
+        .card-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+            background: #000;
+            /* page background */
+        }
+
+        /* Holographic card effect */
+        .card-row .card {
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            flex: 1 0 calc(50% - 20px);
+        }
+
+        @media only screen and (min-width: 768px) {
+            #main-content-area .intro {
+                display: flex;
+                gap: 40px;
+            }
+
+            #main-content-area aside img {
+                max-width: 300px;
+            }
+
+            .card-row .card {
+                flex: 1 0 calc(25% - 20px);
+            }
+        }
+
+        .card-row .card a {
+            margin: 10px auto;
+            position: relative;
+            display: block;
+            width: 144px;
+            height: 200px;
+            /* taller height */
+            overflow: hidden;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #0ff;
+            /* default text color */
+            font-family: sans-serif;
+        }
+
+        /* Image fills top portion of card */
+        .card-row a img {
+            width: 100%;
+            height: 70%;
+            /* top 70% of card height */
+            display: block;
+            border-radius: 15px 15px 0 0;
+            object-fit: cover;
+        }
+
+        /* Text overlay at bottom */
+        .card-row a .card-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30%;
+            /* bottom 30% of card */
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        /* Text hover effect */
+        .card-row a:hover .card-text {
+            color: #fff;
+            /* changes color on hover */
+            font-size: 1.2rem;
+            /* slightly expands text */
+            font-weight: bold;
+        }
+
+        /* Shine overlay */
+        .card-row a::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(0deg,
+                    transparent,
+                    transparent 30%,
+                    rgba(0, 255, 255, 0.3));
+            transform: rotate(-45deg);
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+
+        /* Hover effect */
+        .card-row a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+
+        .card-row a:hover::before {
+            opacity: 1;
+            transform: rotate(-45deg) translateY(100%);
+        }
+    </style>
 </head>
 
 <body>
@@ -79,165 +209,46 @@
 
     </div>
 
-    <!---END CAROUSEL-->
-    <style>
-        /* Flex container for article and aside */
-        #main-content-area {
-            display: flex;
-            gap: 40px;
-            /* space between text and image */
-            align-items: flex-start;
-            max-width: 1024px;
-            /* optional page width */
-            margin: 0 auto;
-            /* center container */
-            flex-wrap: wrap;
-            /* allows wrap on small screens */
-        }
-
-        /* Article styling */
-        #main-content-area article {
-            flex: 1 1 400px;
-            /* grow/shrink, min width 400px */
-        }
-
-        /* Optional styling for heading */
-        #main-content-area h1 span {
-            color: #0ff;
-        }
-
-        /* Aside image styling */
-        #main-content-area aside {
-            flex: 0 0 300px;
-            /* fixed width for image column */
-        }
-
-        #main-content-area aside img {
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
-            object-fit: cover;
-        }
-    </style>
-
     <main>
         <div id="main-content-area">
-            <article>
-                <h1>Bringing stories to <span>life</span></h1>
-                <p>Hello! My name is Kyla Fulton and I'm a BFA Digital Animation major. I enjoy the storytelling
-                    process, whether it be through writing, storyboards, animation, etc.</p>
-                <p>Thanks for stopping by and checking out what I do!</p>
-            </article>
-            <aside style="display:flex; justify-content:center;">
-            <img src="https://fpoimg.com/300x300?text=Your+Image" alt="Profile or Concept Art" style="width:300px; height:auto;">
-            </aside>
-
-            <!----- holographic code start ---->
-            <style>
-                /* Horizontal container for cards */
-                .card-row {
-                    display: flex;
-                    gap: 20px;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 40px;
-                    background: #000;
-                    /* page background */
-                }
-
-                /* Holographic card effect */
-                .card-row a {
-                    position: relative;
-                    display: block;
-                    width: 144px;
-                    height: 200px;
-                    /* taller height */
-                    overflow: hidden;
-                    border-radius: 15px;
-                    transition: transform 0.5s ease, box-shadow 0.5s ease;
-                    flex-shrink: 0;
-                    text-decoration: none;
-                    color: #0ff;
-                    /* default text color */
-                    font-family: sans-serif;
-                }
-
-                /* Image fills top portion of card */
-                .card-row a img {
-                    width: 100%;
-                    height: 70%;
-                    /* top 70% of card height */
-                    display: block;
-                    border-radius: 15px 15px 0 0;
-                    object-fit: cover;
-                }
-
-                /* Text overlay at bottom */
-                .card-row a .card-text {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 30%;
-                    /* bottom 30% of card */
-                    font-size: 1rem;
-                    transition: all 0.3s ease;
-                }
-
-                /* Text hover effect */
-                .card-row a:hover .card-text {
-                    color: #fff;
-                    /* changes color on hover */
-                    font-size: 1.2rem;
-                    /* slightly expands text */
-                    font-weight: bold;
-                }
-
-                /* Shine overlay */
-                .card-row a::before {
-                    content: '';
-                    position: absolute;
-                    top: -50%;
-                    left: -50%;
-                    width: 200%;
-                    height: 200%;
-                    background: linear-gradient(0deg,
-                            transparent,
-                            transparent 30%,
-                            rgba(0, 255, 255, 0.3));
-                    transform: rotate(-45deg);
-                    transition: all 0.5s ease;
-                    opacity: 0;
-                }
-
-                /* Hover effect */
-                .card-row a:hover {
-                    transform: scale(1.05);
-                    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-                }
-
-                .card-row a:hover::before {
-                    opacity: 1;
-                    transform: rotate(-45deg) translateY(100%);
-                }
-            </style>
+            <div class="intro">
+                <article>
+                    <h1>Bringing stories to <span>life</span></h1>
+                    <p>Hello! My name is Kyla Fulton and I'm a BFA Digital Animation major. I enjoy the storytelling
+                        process, whether it be through writing, storyboards, animation, etc.</p>
+                    <p>Thanks for stopping by and checking out what I do!</p>
+                </article>
+                <aside>
+                    <img src="https://fpoimg.com/300x300?text=Your+Image" alt="Profile or Concept Art" />
+                </aside>
+            </div>
 
             <div class="card-row">
-                <a href="https://kylafulton.com/visdev">
-                    <img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" />
-                    <div class="card-text">VisDev</div>
-                </a>
-                <a href="https://kylafulton.com/storyboards">
-                    <img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" />
-                    <div class="card-text">Storyboards</div>
-                </a>
-                <a href="https://kylafulton.com/animation">
-                    <img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" />
-                    <div class="card-text">Animation</div>
-                </a>
-                <a href="https://kylafulton.com/illustration">
-                    <img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" />
-                    <div class="card-text">Illustration</div>
-                </a>
+                <div class="card">
+                    <a href="https://kylafulton.com/visdev">
+                        <img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" />
+                        <div class="card-text">VisDev</div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://kylafulton.com/storyboards">
+                        <img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" />
+                        <div class="card-text">Storyboards</div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://kylafulton.com/animation">
+                        <img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" />
+                        <div class="card-text">Animation</div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://kylafulton.com/illustration">
+                        <img src="https://fpoimg.com/144x144?text=Preview&bg_color=e6e6e6&text_color=8F8F8F" />
+                        <div class="card-text">Illustration</div>
+                    </a>
+                </div>
+
             </div>
             <!--TESTING TWO ENDS--->
             <div class="video-area">
@@ -262,4 +273,5 @@
     </footer>
     <script src="/scripts/carousel.js"></script>
 </body>
+
 </html>
