@@ -233,10 +233,30 @@
                         process, whether it be through writing, storyboards, animation, etc.</p>
                     <p>Thanks for stopping by and checking out what I do!</p>
                 </article>
+                <!--start testing bounce-->
                 <aside>
-                    <img src="/images/thinking.png" style="width:300px; height:auto;" alt="Profile or Concept Art" />
-                </aside>
-            </div>
+    <img 
+        src="/images/thinking.png"
+        alt="Profile or Concept Art"
+        style="
+            width:300px;
+            height:auto;
+            animation: float 6s ease-in-out infinite;
+        "
+    />
+</aside>
+
+<style>
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+</style>
+<!--end testing bounce-->
 
             <div class="card-row">
                 <div class="card">
