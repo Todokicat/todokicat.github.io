@@ -87,15 +87,18 @@
 <!-- PROJECT HEADER -->
 <div style="
   display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-  gap:15px;
+  justify-content:center;
+  align-items:flex-start;
+  gap:60px;
+  flex-wrap:wrap;
   margin-bottom:20px;
 ">
 
-  <!-- TITLE + DESCRIPTION -->
-  <div style="max-width:700px;">
+  <!-- LEFT SIDE: TITLE + DESCRIPTION -->
+  <div style="
+    max-width:400px;
+    text-align:center;
+  ">
     <h1 style="margin:0;">Unwind</h1>
 
     <p style="margin-top:8px; line-height:1.5;">
@@ -103,39 +106,51 @@
     </p>
   </div>
 
-<ul style="text-align:left; line-height:1.8; max-width:600px; margin:auto;">
-  <li>Gameplay Programming</li>
-  <li>Enemy AI Development</li>
-  <li>UI Design</li>
-  <li>Animation Integration</li>
-  <li>Bug Fixing & Testing</li>
-</ul>
-
-  <!-- SOFTWARE LOGOS -->
+  <!-- RIGHT SIDE: BULLETS + SOFTWARE LOGOS -->
   <div style="
     display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:12px;
-    flex-wrap:wrap;
-    margin-top:5px;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
   ">
 
-    <img src="/images/toonboomharmony-logo.png"
-      alt="Toon Boom Harmony"
-      style="height:40px; width:auto;">
+    <!-- BULLET POINTS -->
+    <ul style="
+      line-height:1.8;
+      margin:0;
+      padding-left:20px;
+    ">
+      <li>Rough Animation</li>
+      <li>In-Betweens</li>
+      <li>Coloring & Shading</li>
+      <li>Credits Compositing</li>
+    </ul>
 
-    <img src="/images/tortoisesvn-logo.png"
-      alt="TortoiseSVN"
-      style="height:40px; width:auto;">
+    <!-- SOFTWARE LOGOS -->
+    <div style="
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+    ">
 
-    <img src="/images/photoshop-logo.png"
-      alt="Photoshop"
-      style="height:40px; width:auto;">
+      <img src="/images/toonboomharmony-logo.png"
+        alt="Toon Boom Harmony"
+        style="height:40px; width:auto;">
 
-    <img src="/images/github-logo.png"
-      alt="GitHub"
-      style="height:40px; width:auto;">
+      <img src="/images/tortoisesvn-logo.png"
+        alt="TortoiseSVN"
+        style="height:40px; width:auto;">
+
+      <img src="/images/photoshop-logo.png"
+        alt="Photoshop"
+        style="height:40px; width:auto;">
+
+      <img src="/images/github-logo.png"
+        alt="GitHub"
+        style="height:40px; width:auto;">
+
+    </div>
 
   </div>
 
@@ -154,8 +169,6 @@
   </iframe>
 
 </div>
-
-
 
 <!--DIVIDE LINE-->
 <hr>
