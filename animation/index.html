@@ -116,7 +116,87 @@
     <main>
         <div id="main-content-area">
  
- <!---TEST SECTION BEGINS-->
+ <!---TEST SECTION BEGINS FOR UHHH BUTTONS THAT SCROLL-->
+ <style>
+html {
+    scroll-behavior: smooth;
+}
+
+.card-row {
+    display: flex;
+    gap: 20px;
+}
+
+.card img {
+    width: 144px;
+    height: 144px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+}
+</style>
+
+<!-- IMAGE BUTTONS -->
+<div class="card-row">
+
+    <div class="card">
+        <a href="#visdev">
+            <img src="/images/visdev-preview.png" alt="VisDev">
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="#storyboards">
+            <img src="/images/storyboard-preview.png" alt="Storyboards">
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="#animation">
+            <img src="/images/animation-preview.png" alt="Animation">
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="#illustration">
+            <img src="/images/illustration-preview.png" alt="Illustration">
+        </a>
+    </div>
+
+</div>
+
+<!-- PAGE SECTIONS -->
+<section id="visdev">
+    <h2>VisDev</h2>
+</section>
+
+<section id="storyboards">
+    <h2>Storyboards</h2>
+</section>
+
+<section id="animation">
+    <h2>Animation</h2>
+</section>
+
+<section id="illustration">
+    <h2>Illustration</h2>
+</section>
+
+<!--END SCROLL BUTTONS AREA-->
+
+
+
+
+
+
+
+
+
+
    <!--- VIDEO SECTION --->
             <section class="video-section" style="text-align: center; margin-top: 50px;">
 
