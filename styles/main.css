@@ -389,4 +389,40 @@ body {
             width: 100vw;
         }
     }
+
+ /*WAVY TEXT EFFECT*/   
+    .wavy-text span {
+	display: inline-block;
+	font-size:6rem;
+	animation: wave 2s ease-in-out infinite;
+}
+
+.wavy-text span:nth-child(1) {
+	animation-delay: 0s
+}
+.wavy-text span:nth-child(2) {
+	animation-delay: 0.2s
+}
+.wavy-text span:nth-child(3) {
+	animation-delay: 0.4s
+}
+.wavy-text span:nth-child(4) {
+	animation-delay: 0.6s
+}
+.wavy-text span:nth-child(5) {
+	animation-delay: 0.8s
+}
+.wavy-text span:nth-child(6) {
+	animation-delay: 1.0s
+}
+
+@keyframes wave {
+	0%, 100% {
+		transform: translate(0);
+	}
+	50% {
+		transform: translate(-20px);
+	}
+}
+
 }
