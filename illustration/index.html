@@ -241,36 +241,72 @@
 <hr>
 
 
-<!--ILLUSTRATION STUDIES------------------------------------------------------------>
-<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+<!-- ILLUSTRATION STUDIES ------------------------------------------------------------>
+
+<style>
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .gallery img {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.05);
+        opacity: 0.85;
+    }
+</style>
+
+
+<div class="gallery">
 
     <!-- IMAGE 1 -->
-    <a data-fslightbox="gallery" href="/images/studies_movement.png">
+    <a data-fslightbox="illustration-gallery" 
+       href="/images/studies_movement.png">
         <img src="/images/studies_movement.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 1">
+             alt="Movement Study">
     </a>
+
 
     <!-- IMAGE 2 -->
-    <a data-fslightbox="gallery" href="/images/studies_feet.png">
+    <a data-fslightbox="illustration-gallery" 
+       href="/images/studies_feet.png">
         <img src="/images/studies_feet.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 2">
+             alt="Feet Study">
     </a>
+
 
     <!-- IMAGE 3 -->
-    <a data-fslightbox="gallery" href="/images/studies_hands.png">
+    <a data-fslightbox="illustration-gallery" 
+       href="/images/studies_hands.png">
         <img src="/images/studies_hands.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 3">
+             alt="Hands Study">
     </a>
 
+
     <!-- IMAGE 4 -->
-    <a data-fslightbox="gallery" href="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png">
+    <a data-fslightbox="illustration-gallery" 
+       href="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png">
         <img src="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Dungeon Meshi">
+             alt="Dungeon Meshi Illustration">
     </a>
+
+
+</div>
+
+
+<!-- FSLIGHTBOX SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
+
 <!---------------------------------------------------------------------------------->
             
     </main>
