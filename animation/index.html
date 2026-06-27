@@ -490,27 +490,40 @@ html {
 
 
         <!--BEGIN VIDEO GALLERY-->
+
 <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
 
     <!-- Video 1 -->
-    <video autoplay muted loop playsinline
-           style="width:300px; aspect-ratio:16/9; object-fit:contain; border-radius:10px;">
-        <source src="/images/shrew.mp4" type="video/mp4">
-    </video>
+    <a data-fslightbox="videos" href="/images/shrew.mp4">
+        <video autoplay muted loop playsinline
+               style="width:300px; aspect-ratio:16/9; object-fit:contain; border-radius:10px; cursor:pointer;">
+            <source src="/images/shrew.mp4" type="video/mp4">
+        </video>
+    </a>
+
 
     <!-- Video 2 -->
-    <video autoplay muted loop playsinline
-           style="width:300px; aspect-ratio:16/9; object-fit:contain; border-radius:10px;">
-        <source src="/images/mikuHalloween2025_2.mp4" type="video/mp4">
-    </video>
+    <a data-fslightbox="videos" href="/images/mikuHalloween2025_2.mp4">
+        <video autoplay muted loop playsinline
+               style="width:300px; aspect-ratio:16/9; object-fit:contain; border-radius:10px; cursor:pointer;">
+            <source src="/images/mikuHalloween2025_2.mp4" type="video/mp4">
+        </video>
+    </a>
+
 
     <!-- Video 3 -->
-    <video autoplay muted loop playsinline
-           style="width:300px; aspect-ratio:16/9; object-fit:contain; border-radius:10px;">
-        <source src="/images/ENABDAY_sweetPerfection.mp4" type="video/mp4">
-    </video>
+    <a data-fslightbox="videos" href="/images/ENABDAY_sweetPerfection.mp4">
+        <video autoplay muted loop playsinline
+               style="width:300px; aspect-ratio:16/9; object-fit:contain; border-radius:10px; cursor:pointer;">
+            <source src="/images/ENABDAY_sweetPerfection.mp4" type="video/mp4">
+        </video>
+    </a>
 
 </div>
+
+
+<!-- FsLightbox -->
+<script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
 
 <!-- Video Gallery END -->
 
