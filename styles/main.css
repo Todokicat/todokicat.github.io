@@ -11,13 +11,16 @@ header {
 
 /* Combined common styles to remove duplication while preserving effects */
 
-header nav ul, footer ul, #carousel {
+header nav ul,
+footer ul,
+#carousel {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-header nav ul, footer ul {
+header nav ul,
+footer ul {
     font-size: 1.05rem;
 }
 
@@ -42,7 +45,7 @@ header {
     justify-content: space-between;
     display: flex;
     padding: 5px 0;
-    
+
 
     #branding-subhead {
         display: none;
@@ -79,6 +82,7 @@ header {
                 white-space: nowrap;
                 display: block;
                 border-top: solid thin white;
+
                 a {
                     display: block;
                     position: relative;
@@ -121,22 +125,27 @@ header {
                     margin-top: .4rem;
                 }
             }
-            li:hover, li:focus {
+
+            li:hover,
+            li:focus {
                 background-color: #000000;
             }
+
             li:active {
                 background-color: #000000;
+
                 a {
                     color: #ffffff;
                 }
             }
+
             li.nav-divider {
                 display: none;
             }
         }
     }
 
-    #mobile-menu-toggle:checked ~ nav {
+    #mobile-menu-toggle:checked~nav {
         display: flex;
         position: absolute;
         width: 100vw;
@@ -146,15 +155,18 @@ header {
 
     #branding {
         margin-inline-start: 3rem;
+
         h1 {
             margin: 0;
             padding: 0;
         }
+
         p {
             margin: -0.25em 0 0 0;
         }
     }
 }
+
 /*NAVIBAR LOGO SIZE BEGINS*/
 #branding {
     display: flex;
@@ -163,21 +175,25 @@ header {
 }
 
 .branding-logo {
-    height: 40px;   /* adjust to fit your navbar */
-    width: auto;    /* keeps aspect ratio */
+    height: 40px;
+    /* adjust to fit your navbar */
+    width: auto;
+    /* keeps aspect ratio */
 }
+
 /*NAVIBAR LOGO SIZE ENDS*/
 
 
 
 /*BEGIN CAROUSEL CSS??*/
-body{
-    margin:0;
+body {
+    margin: 0;
 }
 
-.carousel-container{
-    width:100%;
+.carousel-container {
+    width: 100%;
 }
+
 /*END CAROUSEL CSS??*/
 
 body {
@@ -191,19 +207,23 @@ body {
 
     main {
         flex-grow: 1;
+
         #main-content-area {
             padding: 1.5em 3em;
             background-color: rgb(0, 0, 0);
+
             article {
                 h1 {
                     margin-top: 0;
                     color: #ffffff;
                     font-size: 2.7em;
                     line-height: 1.15em;
+
                     span {
                         color: #cc99ff;
                     }
                 }
+
                 p {
                     line-height: 1.5em;
                 }
@@ -216,7 +236,7 @@ body {
                 max-width: 100%;
                 place-items: center;
                 gap: 2rem;
-                
+
                 a img {
                     max-width: 20vw;
                 }
@@ -241,6 +261,7 @@ body {
     footer {
         font-size: 0.75rem;
         border-top: thin solid #444;
+
         ul {
             padding: 0.5rem 3rem;
             display: flex;
@@ -267,14 +288,14 @@ body {
         display: flex;
         justify-content: space-between;
         gap: 15px;
-        
+
         a {
             display: block;
         }
-        
-                a img {
-                    max-width: 40vw;
-                }
+
+        a img {
+            max-width: 40vw;
+        }
     }
 }
 
@@ -282,17 +303,19 @@ body {
     body main #main-content-area {
         .video-info {
             margin-right: 1em;
-            
+
             h2 {
                 margin-top: 0;
             }
         }
+
         .video-area {
             padding: 1.5em 0 0 0;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
         }
+
         .card-row {
             width: 100%;
         }
@@ -304,15 +327,17 @@ body {
         #main-content-area {
             max-width: 1024px;
             margin: 0 auto;
+
             aside {
                 display: flex;
                 justify-content: space-between;
                 gap: 15px;
-                
+
                 a {
                     display: block;
                 }
             }
+
             article {
                 p {
                     max-width: 50em;
@@ -326,6 +351,7 @@ body {
     body nav ul li a::before {
         bottom: 10px;
     }
+
     header {
         #branding-subhead {
             display: block;
@@ -336,7 +362,7 @@ body {
         display: none;
     }
 
-    header nav{
+    header nav {
         justify-content: flex-end;
         display: block;
         margin-right: 3rem;
@@ -362,16 +388,61 @@ body {
                     align-items: center;
                     padding: 0;
                 }
+
                 .social-tile {
                     margin: auto 0;
                 }
             }
+
             li.nav-divider {
                 height: 100%;
                 display: flex;
                 align-items: center;
             }
         }
+    }
+}
+
+/*WAVY TEXT EFFECT*/
+.wavy-text span {
+    display: inline-block;
+    font-size: 6rem;
+    animation: wave 2s ease-in-out infinite;
+}
+
+.wavy-text span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.wavy-text span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.wavy-text span:nth-child(3) {
+    animation-delay: .4s;
+}
+
+.wavy-text span:nth-child(4) {
+    animation-delay: .6s;
+}
+
+.wavy-text span:nth-child(5) {
+    animation-delay: .8s;
+}
+
+.wavy-text span:nth-child(6) {
+    animation-delay: 1s;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
     }
 }
 
@@ -389,28 +460,5 @@ body {
             width: 100vw;
         }
     }
-
- /*WAVY TEXT EFFECT*/   
-    .wavy-text span {
-    display: inline-block;
-    font-size: 6rem;
-    animation: wave 2s ease-in-out infinite;
-}
-
-.wavy-text span:nth-child(1) { animation-delay: 0s; }
-.wavy-text span:nth-child(2) { animation-delay: .2s; }
-.wavy-text span:nth-child(3) { animation-delay: .4s; }
-.wavy-text span:nth-child(4) { animation-delay: .6s; }
-.wavy-text span:nth-child(5) { animation-delay: .8s; }
-.wavy-text span:nth-child(6) { animation-delay: 1s; }
-
-@keyframes wave {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
 
 }
