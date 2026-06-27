@@ -406,7 +406,7 @@ body {
 /*WAVY TEXT EFFECT*/
 .wavy-text span {
     display: inline-block;
-    font-size: 10px;
+    font-size: 30px;
     animation: wave 2s ease-in-out infinite;
 }
 
