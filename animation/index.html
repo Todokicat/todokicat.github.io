@@ -491,8 +491,36 @@ html {
 
         <!--BEGIN VIDEO GALLERY-->
 
-<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+<!--<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">-->
 
+
+
+
+  <style>
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .gallery img {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.05);
+        opacity: 0.85;
+    }
+</style>
+
+
+<div class="gallery">
     <!-- Video 1 -->
     <a data-fslightbox="videos" href="/images/shrew.mp4">
         <video autoplay muted loop playsinline
