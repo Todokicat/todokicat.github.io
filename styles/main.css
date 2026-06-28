@@ -534,4 +534,15 @@ body {
         }
     }
 
+
+    /*VISDEV BANNER CSS*/
+    <style>
+#visdev-banner {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+</style>
+/*VISDEV BANNER END*/
+
 }
