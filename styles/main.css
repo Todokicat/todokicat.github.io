@@ -231,15 +231,31 @@ body {
 
             aside {
                 margin-top: 2em;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
+                flex: 0 0 300px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                align-self: flex-start;
                 max-width: 100%;
-                place-items: center;
                 gap: 2rem;
 
                 a img {
                     max-width: 20vw;
                 }
+            }
+
+            .intro {
+                align-items: flex-start;
+            }
+
+            .intro aside img {
+                display: block;
+                width: 300px;
+                height: auto;
+                border-radius: 15px;
+                object-fit: cover;
+                margin: 0 auto;
+                animation: float 6s ease-in-out infinite;
             }
 
             .video-area {
@@ -407,7 +423,6 @@ body {
 .wavy-text span {
     display: inline-block;
     font-size: clamp(24px, 4vw, 45px);
-    font-size:;
     animation: wave 2s ease-in-out infinite;
 }
 
