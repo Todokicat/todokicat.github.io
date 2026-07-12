@@ -93,12 +93,57 @@
         <label for="mobile-menu-toggle" id="mobile-menu-toggle-button">&#9776;</label>
     </header>
     <!-- Navigation ends here -->
-    <main>
-        <div id="main-content-area">
-    <!---START-->        
-      
     
-    <img id="visdev-banner" src="/images/alicelineup.png" />
+    <style>
+    #visdev-banner {
+      width: 100%;
+    }
+
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+
+    /* Wrapper for each image + caption */
+    .image-wrapper {
+      position: relative;
+      /* needed for caption positioning */
+      width: 100%;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background: #fff;
+      display: block;
+      object-fit: cover;
+      max-height: 400px;
+      /* optional for very tall images */
+    }
+
+    /* Caption style */
+    .caption {
+      position: absolute;
+      bottom: 8px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.5);
+      /* semi-transparent background */
+      color: #fff;
+      font-size: 14px;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+  </style>
+
+  <body>
+    <main>
+      <img id="visdev-banner" src="/images/alicelineup.png" />
       <div id="main-content-area">
         <!--START CAROUSEL-->
         <!---END CAROUSEL-->
