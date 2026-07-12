@@ -17,33 +17,120 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
     <link rel="apple-touch-icon" href="/favicon.png">
     <style>
-        .resume {
-            width: 100%;
-            aspect-ratio: 8.5 / 11;
+        /* Article styling */
+        #main-content-area article {
+            flex: 1 1 400px;
+            /* grow/shrink, min width 400px */
         }
-        .download-resume {
-            margin: 30px 0;
-            position: relative;
-            display: inline-block;
-            margin-top: 10px;
-            background-color: #553b6b;
-            border-radius: 6px;
-            padding: 10px 15px 10px 40px;
-            color: #fff;
-            font-weight: bold;
-            text-decoration: none;
-            text-wrap: nowrap;
-            svg {
-                position: absolute;
-                top: 10px;
-                left: 12px;
-                max-width: 20px;
-                fill: white;
+
+        /* Optional styling for heading */
+        #main-content-area h1 span {
+            color: #0ff;
+        }
+
+        .card-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+            background: #000;
+            /* page background */
+        }
+
+        /* Holographic card effect */
+        .card-row .card {
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            flex: 1 0 calc(50% - 20px);
+        }
+
+        @media only screen and (min-width: 768px) {
+            #main-content-area .intro {
+                display: flex;
+                gap: 40px;
+            }
+
+            #main-content-area aside img {
+                max-width: 300px;
+            }
+
+            .card-row .card {
+                flex: 1 0 calc(25% - 20px);
             }
         }
-        .resume-character {
+
+        .card-row .card a {
+            margin: 10px auto;
+            position: relative;
             display: block;
-            margin: -10px auto 0 auto;
+            width: 144px;
+            height: 200px;
+            /* taller height */
+            overflow: hidden;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #0ff;
+            /* default text color */
+            font-family: sans-serif;
+        }
+
+        /* Image fills top portion of card */
+        .card-row a img {
+            width: 100%;
+            height: 70%;
+            /* top 70% of card height */
+            display: block;
+            border-radius: 15px 15px 0 0;
+            object-fit: cover;
+        }
+
+        /* Text overlay at bottom */
+        .card-row a .card-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30%;
+            /* bottom 30% of card */
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        /* Text hover effect */
+        .card-row a:hover .card-text {
+            color: #fff;
+            /* changes color on hover */
+            font-size: 1.2rem;
+            /* slightly expands text */
+            font-weight: bold;
+        }
+
+        /* Shine overlay */
+        .card-row a::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(0deg,
+                    transparent,
+                    transparent 30%,
+                    rgba(0, 255, 255, 0.3));
+            transform: rotate(-45deg);
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+
+        /* Hover effect */
+        .card-row a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+
+        .card-row a:hover::before {
+            opacity: 1;
+            transform: rotate(-45deg) translateY(100%);
         }
     </style>
 </head>
@@ -173,29 +260,18 @@
 
 
 
-<!---------------BUTTONS------------->
-<div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;max-width:700px;margin:auto;">
+<div class="buttons">
 
-  <a href="page1.html" style="display:block;transition:.3s;">
-    <img src="/personal/SpringFest2025-2.jpg" alt="Button 1"
-         style="width:480px;aspect-ratio:1;border-radius:12px;display:block;"
-         onmouseover="this.style.transform='scale(1.08)';this.style.filter='drop-shadow(0 0 18px #fff)'"
-         onmouseout="this.style.transform='scale(1)';this.style.filter='none'">
+  <a href="page1.html">
+    <img src="/personal/SpringFest2025-2.jpg" alt="Button 1">
   </a>
 
-  <a href="page2.html" style="display:block;transition:.3s;">
-    <img src="/personal/SpringFest2025-2.jpg" alt="Button 2"
-         style="width:480px;aspect-ratio:1;border-radius:12px;display:block;"
-         onmouseover="this.style.transform='scale(1.08)';this.style.filter='drop-shadow(0 0 18px #fff)'"
-         onmouseout="this.style.transform='scale(1)';this.style.filter='none'">
+  <a href="page2.html">
+    <img src="/personal/SpringFest2025-2.jpg" alt="Button 2">
   </a>
 
-  <a href="page3.html" style="display:block;transition:.3s;">
-    <img src="/personal/SpringFest2025-2.jpg" alt="Button 3"
-         style="width:480px;aspect-ratio:1;border-radius:12px;display:block;"
-         onmouseover="this.style.transform='scale(1.08)';this.style.filter='drop-shadow(0 0 18px #fff)'"
-         onmouseout="this.style.transform='scale(1)';this.style.filter='none'">
+  <a href="page3.html">
+    <img src="/personal/SpringFest2025-2.jpg" alt="Button 3">
   </a>
 
 </div>
-<!-------------END BUTTONS--------------->
