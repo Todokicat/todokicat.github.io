@@ -258,43 +258,65 @@
 
 
 
+<!---BUTTONS BEGIN---->
 
-<div style="display:flex; justify-content:center; gap:30px;">
+<style>
+.button-container {
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
 
-    <a href="page1.html">
-        <img src="/personal/SpringFest2025-2.jpg"
-             style="
-                width:200px;
-                height:200px;
-                object-fit:cover;
-                transition:transform 0.3s ease;
-             "
-             onmouseover="this.style.transform='scale(1.1)'"
-             onmouseout="this.style.transform='scale(1)'">
-    </a>
+.button-item {
+    text-align:center;
+}
 
-    <a href="page2.html">
-        <img src="/personal/SpringFest2025-2.jpg"
-             style="
-                width:200px;
-                height:200px;
-                object-fit:cover;
-                transition:transform 0.3s ease;
-             "
-             onmouseover="this.style.transform='scale(1.1)'"
-             onmouseout="this.style.transform='scale(1)'">
-    </a>
+.button-item img {
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    transition:transform 0.3s ease;
+}
 
-    <a href="page3.html">
-        <img src="/personal/SpringFest2025-2.jpg"
-             style="
-                width:200px;
-                height:200px;
-                object-fit:cover;
-                transition:transform 0.3s ease;
-             "
-             onmouseover="this.style.transform='scale(1.1)'"
-             onmouseout="this.style.transform='scale(1)'">
-    </a>
+.button-item img:hover {
+    transform:scale(1.1);
+}
+
+.button-text {
+    margin-top:8px;
+    font-size:14px;
+}
+
+@media (max-width:600px) {
+    .button-container {
+        flex-direction:column;
+        align-items:center;
+    }
+}
+</style>
+
+<div class="button-container">
+
+    <div class="button-item">
+        <a href="page1.html">
+            <img src="/personal/SpringFest2025-2.jpg">
+        </a>
+        <p class="button-text">Spring Fest</p>
+    </div>
+
+    <div class="button-item">
+        <a href="page2.html">
+            <img src="/personal/SpringFest2025-2.jpg">
+        </a>
+        <p class="button-text">Photography</p>
+    </div>
+
+    <div class="button-item">
+        <a href="page3.html">
+            <img src="/personal/SpringFest2025-2.jpg">
+        </a>
+        <p class="button-text">Illustration</p>
+    </div>
 
 </div>
