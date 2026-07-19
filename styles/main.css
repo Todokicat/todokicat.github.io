@@ -184,99 +184,125 @@ header {
 /*NAVIBAR LOGO SIZE ENDS*/
 
 /*UMM the code that drops down the navibar options*/
-/* DROPDOWN NAVIGATION */
+/* ========================================= */
+/* NAVBAR DROPDOWN MENU */
+/* ========================================= */
 
-/* Parent nav item */
-.mobile-dropdown {
+
+/* Parent item must anchor the dropdown */
+.desktop-navigation > ul > li.mobile-dropdown {
     position: relative;
 }
 
-/* Hide dropdown by default */
-.mobile-submenu {
+
+/* ========================================= */
+/* HIDE SUBMENU BY DEFAULT */
+/* ========================================= */
+
+.desktop-navigation > ul > li.mobile-dropdown > .mobile-submenu {
     display: none;
+
     position: absolute;
-    top: calc(100% + 5px);
+    top: 100%;
     left: 0;
 
-    /* Prevent inheriting main nav spacing */
-    flex-direction: column;
-    align-items: flex-start;
+    /* Prevents it from affecting navbar spacing */
+    width: max-content;
+    min-width: 180px;
 
-    margin: 0;
+    margin: 5px 0 0 0;
     padding: 8px 0;
+
     list-style: none;
 
-    /* Dropdown background */
+    /* Dropdown appearance */
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
-    min-width: 180px;
-    z-index: 1000;
+    z-index: 9999;
+
+    /* Overrides horizontal nav flex */
+    flex-direction: column;
+    flex: none;
 }
 
-/* Show dropdown on hover */
-.mobile-dropdown:hover .mobile-submenu {
-    display: flex;
-}
 
+/* ========================================= */
+/* SHOW SUBMENU ON HOVER */
+/* ========================================= */
 
-/* Keep dropdown items from affecting navbar layout */
-.mobile-submenu li {
+.desktop-navigation > ul > li.mobile-dropdown:hover > .mobile-submenu {
     display: block;
+}
+
+
+/* ========================================= */
+/* SUBMENU ITEMS */
+/* ========================================= */
+
+.desktop-navigation > ul > li.mobile-dropdown > .mobile-submenu > li {
+    display: block;
+
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
 
-/* Dropdown links */
-.mobile-submenu li a {
+/* ========================================= */
+/* SUBMENU LINKS */
+/* ========================================= */
+
+.desktop-navigation > ul > li.mobile-dropdown > .mobile-submenu > li > a {
     display: block;
+
     padding: 8px 18px;
+
     white-space: nowrap;
+
     text-decoration: none;
 
-    /* Match your navbar text */
     color: #000000;
 }
 
 
-/* Dropdown hover effect */
-.mobile-submenu li a:hover {
+/* ========================================= */
+/* SUBMENU HOVER EFFECT */
+/* ========================================= */
+
+.desktop-navigation > ul > li.mobile-dropdown > .mobile-submenu > li > a:hover {
     background: rgba(0, 0, 0, 0.08);
 }
 
 
-/* ============================= */
-/* HORIZONTAL NAVBAR OVERRIDE */
-/* Prevents dropdown from pushing navbar items */
-/* ============================= */
+/* ========================================= */
+/* PROTECT MAIN NAVBAR FROM SUBMENU */
+/* ========================================= */
 
+
+/* Main navigation stays horizontal */
 .desktop-navigation > ul {
     display: flex;
     align-items: center;
 }
 
-.desktop-navigation .mobile-submenu {
+
+/* Dropdown does NOT inherit main nav spacing */
+.desktop-navigation > ul > li.mobile-dropdown > .mobile-submenu {
     display: none;
-    position: absolute;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.desktop-navigation .mobile-dropdown:hover .mobile-submenu {
-    display: flex;
 }
 
 
-/* Keep submenu independent from navbar spacing */
-.desktop-navigation .mobile-submenu li {
+/* Re-enable dropdown display */
+.desktop-navigation > ul > li.mobile-dropdown:hover > .mobile-submenu {
     display: block;
 }
 
-.desktop-navigation .mobile-submenu li a {
-    display: block;
+
+/* Ensure submenu does not become a flex item */
+.desktop-navigation .mobile-submenu {
+    flex: none;
 }
 /*END*/
 
