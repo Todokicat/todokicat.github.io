@@ -185,13 +185,45 @@ header {
 
 /*UMM the code that drops down the navibar options*/
 /* Hide submenu by default */
-.mobile-submenu {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 20px;
+/* Parent item */
+.mobile-dropdown {
+    position: relative;
 }
 
+/* Hide submenu */
+.mobile-submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: white; /* Change to match your navbar */
+    min-width: 180px;
+    z-index: 1000;
+}
+
+/* Show on hover */
+.mobile-dropdown:hover .mobile-submenu {
+    display: block;
+}
+
+/* Style submenu links */
+.mobile-submenu li {
+    width: 100%;
+}
+
+.mobile-submenu li a {
+    display: block;
+    padding: 10px 15px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.mobile-submenu li a:hover {
+    background: #f2f2f2; /* Optional */
+}
 /*END*/
 
 /*BEGIN CAROUSEL CSS??*/
