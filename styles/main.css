@@ -183,7 +183,23 @@ header {
 
 /*NAVIBAR LOGO SIZE ENDS*/
 
+/*UMM the code that drops down the navibar options*/
+/* Hide submenu by default */
+.mobile-submenu {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 20px;
+}
 
+/* Only show on mobile */
+@media (max-width: 768px) {
+    .mobile-dropdown:hover .mobile-submenu,
+    .mobile-dropdown:focus-within .mobile-submenu {
+        display: block;
+    }
+}
+/*END*/
 
 /*BEGIN CAROUSEL CSS??*/
 body {
@@ -533,24 +549,6 @@ body {
             width: 100vw;
         }
     }
-
-/*UMM the code that drops down the navibar options*/
-/* Hide submenu by default */
-.mobile-submenu {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 20px;
-}
-
-/* Only show on mobile */
-@media (max-width: 768px) {
-    .mobile-dropdown:hover .mobile-submenu,
-    .mobile-dropdown:focus-within .mobile-submenu {
-        display: block;
-    }
-}
-
 
 
     /*VISDEV BANNER CSS*/
