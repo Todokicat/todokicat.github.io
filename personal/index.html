@@ -261,102 +261,221 @@
 
 <hr>
 
-<!---BUTTONS BEGIN---->
-
+<!--------TEST INFORMATION HERE BEGINS-->
 <style>
-.button-container {
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
+.project {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-.button-item {
+.project-header {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project-header img.main-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.project-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.project-info h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.gallery {
+    margin-top: 25px;
+}
+
+.gallery summary {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform .3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+hr {
+    margin: 60px auto;
+    max-width: 1100px;
+}
+
+@media (max-width:700px){
+
+.project-header{
+    flex-direction:column;
     text-align:center;
 }
 
-.button-item img {
-    width:200px;
-    height:200px;
-    object-fit:cover;
-    transition:transform 0.3s ease;
+.project-header img.main-image{
+    width:100%;
+    max-width:350px;
+    height:auto;
 }
 
-.button-item img:hover {
-    transform:scale(1.1);
-}
-
-.button-text {
-    margin-top:8px;
-    font-size:14px;
-}
-
-@media (max-width:600px) {
-    .button-container {
-        flex-direction:column;
-        align-items:center;
-    }
 }
 </style>
 
-<div class="button-container">
+<!-- ======================= -->
+<!-- Celebration of the Arts -->
+<!-- ======================= -->
 
+<section class="project">
 
-  <!---Start 1-------------------------------->
-    <div class="button-item" style="width:400px; text-align:center;">
-    <a href="page1.html">
-        <img src="/personal/SpringFest2025-2.jpg"
-             style="width:200px; height:200px; object-fit:cover;">
-    </a>
+    <div class="project-header">
 
-    <div style="padding-top:8px;">
-        <p style="text-shadow: #b48cff;">
-            <b>Celebration of the Arts</b>
-        </p>
+        <img class="main-image"
+             src="/personal/SpringFest2025-2.jpg"
+             alt="Celebration of the Arts">
 
-        <p style="font-size:13px;">
-            I created an art festival at The University of Alabama in Huntsville
-        </p>
+        <div class="project-info">
+
+            <h2>Celebration of the Arts</h2>
+
+            <p>
+                I created an art festival at The University of Alabama in
+                Huntsville that brought together student organizations,
+                artists, performers, and interactive activities.
+            </p>
+
+        </div>
+
     </div>
-</div>
-<!--END 1------------------------------------>
 
-    <!---Start 2-------------------------------->
-    <div class="button-item" style="width:400px; text-align:center;">
-    <a href="WIP">
-        <img src="/personal/KamiconBham2025.png"
-             style="width:200px; height:200px; object-fit:cover;">
-    </a>
+    <details class="gallery">
 
-    <div style="padding-top:8px;">
-        <p style="text-shadow: #b48cff;">
-            <b>Hosting Panels</b>
-        </p>
+        <summary>View Gallery</summary>
 
-        <p style="font-size:13px;">
-            I've helped host and plan multiple panels at conventions and events
-        </p>
+        <div class="gallery-grid">
+
+            <img src="/personal/SpringFest2025-2.jpg">
+            <img src="/personal/SpringFest2025-3.jpg">
+            <img src="/personal/SpringFest2025-4.jpg">
+            <img src="/personal/SpringFest2025-5.jpg">
+            <img src="/personal/SpringFest2025-6.jpg">
+
+        </div>
+
+    </details>
+
+</section>
+
+<hr>
+
+<!-- ======================= -->
+<!-- Hosting Panels -->
+<!-- ======================= -->
+
+<section class="project">
+
+    <div class="project-header">
+
+        <img class="main-image"
+             src="/personal/KamiconBham2025.png"
+             alt="Hosting Panels">
+
+        <div class="project-info">
+
+            <h2>Hosting Panels</h2>
+
+            <p>
+                I've helped organize and host educational and entertainment
+                panels at conventions and community events.
+            </p>
+
+        </div>
+
     </div>
-</div>
-<!--END 2------------------------------------>
 
-    <!---Start 3-------------------------------->
-    <div class="button-item" style="width:400px; text-align:center;">
-    <a href="WIP">
-        <img src="/personal/EustassKidCosplayContest_Chargercon2026.png"
-             style="width:200px; height:200px; object-fit:cover;">
-    </a>
+    <details class="gallery">
 
-    <div style="padding-top:8px;">
-        <p style="text-shadow: #b48cff;">
-            <b>Digital Fabrication</b>
-        </p>
+        <summary>View Gallery</summary>
 
-        <p style="font-size:13px;">
-            Cosplay, props, and more!
-        </p>
+        <div class="gallery-grid">
+
+            <img src="/personal/KamiconBham2025.png">
+            <img src="/personal/panel2.jpg">
+            <img src="/personal/panel3.jpg">
+
+        </div>
+
+    </details>
+
+</section>
+
+<hr>
+
+<!-- ======================= -->
+<!-- Digital Fabrication -->
+<!-- ======================= -->
+
+<section class="project">
+
+    <div class="project-header">
+
+        <img class="main-image"
+             src="/personal/EustassKidCosplayContest_Chargercon2026.png"
+             alt="Digital Fabrication">
+
+        <div class="project-info">
+
+            <h2>Digital Fabrication</h2>
+
+            <p>
+                I design and fabricate cosplay props, costumes, and other
+                creative projects using digital fabrication techniques.
+            </p>
+
+        </div>
+
     </div>
-</div>
-<!--END 3------------------------------------>
 
-</div>
+    <details class="gallery">
+
+        <summary>View Gallery</summary>
+
+        <div class="gallery-grid">
+
+            <img src="/personal/EustassKidCosplayContest_Chargercon2026.png">
+            <img src="/personal/prop2.jpg">
+            <img src="/personal/prop3.jpg">
+
+        </div>
+
+    </details>
+
+</section>
+<!---TEST ENDS-->
