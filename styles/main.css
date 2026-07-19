@@ -529,6 +529,50 @@ body {
 }
 
 
+
+
+/* Smaller Wavy Text */
+.wavy-text-small span {
+    display: inline-block;
+    font-size: clamp(18px, 3vw, 32px);
+    animation: wave 2s ease-in-out infinite;
+}
+
+.wavy-text-small span:nth-child(1) { animation-delay: 0s; }
+.wavy-text-small span:nth-child(2) { animation-delay: .2s; }
+.wavy-text-small span:nth-child(3) { animation-delay: .4s; }
+.wavy-text-small span:nth-child(4) { animation-delay: .6s; }
+.wavy-text-small span:nth-child(5) { animation-delay: .8s; }
+.wavy-text-small span:nth-child(6) { animation-delay: 1s; }
+.wavy-text-small span:nth-child(7) { animation-delay: 1.2s; }
+.wavy-text-small span:nth-child(8) { animation-delay: 1.4s; }
+.wavy-text-small span:nth-child(9) { animation-delay: 1.6s; }
+.wavy-text-small span:nth-child(10) { animation-delay: 1.8s; }
+.wavy-text-small span:nth-child(11) { animation-delay: 2s; }
+.wavy-text-small span:nth-child(12) { animation-delay: 2.2s; }
+.wavy-text-small span:nth-child(13) { animation-delay: 2.4s; }
+.wavy-text-small span:nth-child(14) { animation-delay: 2.6s; }
+.wavy-text-small span:nth-child(15) { animation-delay: 2.8s; }
+.wavy-text-small span:nth-child(16) { animation-delay: 3s; }
+.wavy-text-small span:nth-child(17) { animation-delay: 3.2s; }
+.wavy-text-small span:nth-child(18) { animation-delay: 3.4s; }
+.wavy-text-small span:nth-child(19) { animation-delay: 3.6s; }
+.wavy-text-small span:nth-child(20) { animation-delay: 3.8s; }
+
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
 #carousel {
     width: 100vw;
     overflow: hidden;
