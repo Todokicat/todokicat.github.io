@@ -192,13 +192,6 @@ header {
     padding-left: 20px;
 }
 
-/* Only show on mobile */
-@media (max-width: 768px) {
-    .mobile-dropdown:hover .mobile-submenu,
-    .mobile-dropdown:focus-within .mobile-submenu {
-        display: block;
-    }
-}
 /*END*/
 
 /*BEGIN CAROUSEL CSS??*/
