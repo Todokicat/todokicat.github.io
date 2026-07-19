@@ -184,45 +184,99 @@ header {
 /*NAVIBAR LOGO SIZE ENDS*/
 
 /*UMM the code that drops down the navibar options*/
-/* Hide submenu by default */
-/* Parent item */
+/* DROPDOWN NAVIGATION */
+
+/* Parent nav item */
 .mobile-dropdown {
     position: relative;
 }
 
-/* Hide submenu */
+/* Hide dropdown by default */
 .mobile-submenu {
     display: none;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 5px);
     left: 0;
-    list-style: none;
+
+    /* Prevent inheriting main nav spacing */
+    flex-direction: column;
+    align-items: flex-start;
+
     margin: 0;
-    padding: 0;
-    background: white; /* Change to match your navbar */
+    padding: 8px 0;
+    list-style: none;
+
+    /* Dropdown background */
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
     min-width: 180px;
     z-index: 1000;
 }
 
-/* Show on hover */
+/* Show dropdown on hover */
 .mobile-dropdown:hover .mobile-submenu {
-    display: block;
+    display: flex;
 }
 
-/* Style submenu links */
+
+/* Keep dropdown items from affecting navbar layout */
 .mobile-submenu li {
+    display: block;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
+
+/* Dropdown links */
 .mobile-submenu li a {
     display: block;
-    padding: 10px 15px;
+    padding: 8px 18px;
     white-space: nowrap;
     text-decoration: none;
+
+    /* Match your navbar text */
+    color: #000000;
 }
 
+
+/* Dropdown hover effect */
 .mobile-submenu li a:hover {
-    background: #f2f2f2; /* Optional */
+    background: rgba(0, 0, 0, 0.08);
+}
+
+
+/* ============================= */
+/* HORIZONTAL NAVBAR OVERRIDE */
+/* Prevents dropdown from pushing navbar items */
+/* ============================= */
+
+.desktop-navigation > ul {
+    display: flex;
+    align-items: center;
+}
+
+.desktop-navigation .mobile-submenu {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.desktop-navigation .mobile-dropdown:hover .mobile-submenu {
+    display: flex;
+}
+
+
+/* Keep submenu independent from navbar spacing */
+.desktop-navigation .mobile-submenu li {
+    display: block;
+}
+
+.desktop-navigation .mobile-submenu li a {
+    display: block;
 }
 /*END*/
 
