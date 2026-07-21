@@ -158,6 +158,7 @@
                 <li><a href="/illustration">Illustration</a></li>
                 <li class="nav-divider">|</li>
                 <li><a href="/about">Contact</a></li>
+                <li><a href="/personal">Personal</a></li>
                 <li><a href="/resume">Resume</a></li>
                 <li>
                     <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/kyla-fulton-85b289259/">
@@ -422,100 +423,99 @@ hr {
 
     </div>
 
-    <details class="gallery">
-
-        <summary>View Gallery</summary>
-
-        <!-- Image Gallery START HERE ---------------------------------------------->
+    <!-- Image Gallery START HERE ---------------------------------------------->
 
 <style>
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery a {
+    flex: 0 0 auto;
+}
+
+.gallery img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+/* Mobile: 2 images per row */
+@media (max-width: 768px) {
     .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+        gap: 12px;
+    }
+
+    .gallery a {
+        width: calc(50% - 6px);
     }
 
     .gallery img {
-        width: 220px;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: transform 0.2s ease, opacity 0.2s ease;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
     }
-
-    .gallery img:hover {
-        transform: scale(1.05);
-        opacity: 0.85;
-    }
+}
 </style>
-
 
 <div class="gallery">
 
     <!-- IMAGE 1 -->
     <a data-fslightbox="gallery" href="/images/illustration1.png">
-        <img src="/images/illustration1.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 1">
+        <img src="/images/illustration1.png" alt="Illustration 1">
     </a>
 
     <!-- IMAGE 2 -->
     <a data-fslightbox="gallery" href="/images/illustration2.png">
-        <img src="/images/illustration2.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 2">
+        <img src="/images/illustration2.png" alt="Illustration 2">
     </a>
 
     <!-- IMAGE 3 -->
     <a data-fslightbox="gallery" href="/images/illustration3.png">
-        <img src="/images/illustration3.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 3">
+        <img src="/images/illustration3.png" alt="Illustration 3">
     </a>
 
     <!-- IMAGE 4 -->
     <a data-fslightbox="gallery" href="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png">
-        <img src="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Dungeon Meshi">
+        <img src="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png" alt="Dungeon Meshi">
     </a>
-
-<!--next row-->
 
     <!-- IMAGE 5 -->
     <a data-fslightbox="gallery" href="/images/illustration4.png">
-        <img src="/images/illustration4.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 1">
+        <img src="/images/illustration4.png" alt="Illustration 4">
     </a>
 
     <!-- IMAGE 6 -->
     <a data-fslightbox="gallery" href="/images/illustration5.png">
-        <img src="/images/illustration5.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 2">
+        <img src="/images/illustration5.png" alt="Illustration 5">
     </a>
 
     <!-- IMAGE 7 -->
     <a data-fslightbox="gallery" href="/images/illustration6.jpg">
-        <img src="/images/illustration6.jpg"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 3">
+        <img src="/images/illustration6.jpg" alt="Illustration 6">
     </a>
 
     <!-- IMAGE 8 -->
     <a data-fslightbox="gallery" href="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png">
-        <img src="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Dungeon Meshi">
+        <img src="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png" alt="Dungeon Meshi">
     </a>
 
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
-<!--END HERE------------------------------------------------------------------------>
+
+<!-- END HERE -------------------------------------------------------------->
 
     </details>
 
@@ -555,100 +555,99 @@ hr {
 
     </div>
 
-    <details class="gallery">
-
-        <summary>View Gallery</summary>
-
-        <!-- Image Gallery START HERE ---------------------------------------------->
+    <!-- Image Gallery START HERE ---------------------------------------------->
 
 <style>
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery a {
+    flex: 0 0 auto;
+}
+
+.gallery img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+/* Mobile: 2 images per row */
+@media (max-width: 768px) {
     .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+        gap: 12px;
+    }
+
+    .gallery a {
+        width: calc(50% - 6px);
     }
 
     .gallery img {
-        width: 220px;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: transform 0.2s ease, opacity 0.2s ease;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
     }
-
-    .gallery img:hover {
-        transform: scale(1.05);
-        opacity: 0.85;
-    }
+}
 </style>
-
 
 <div class="gallery">
 
     <!-- IMAGE 1 -->
     <a data-fslightbox="gallery" href="/images/illustration1.png">
-        <img src="/images/illustration1.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 1">
+        <img src="/images/illustration1.png" alt="Illustration 1">
     </a>
 
     <!-- IMAGE 2 -->
     <a data-fslightbox="gallery" href="/images/illustration2.png">
-        <img src="/images/illustration2.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 2">
+        <img src="/images/illustration2.png" alt="Illustration 2">
     </a>
 
     <!-- IMAGE 3 -->
     <a data-fslightbox="gallery" href="/images/illustration3.png">
-        <img src="/images/illustration3.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 3">
+        <img src="/images/illustration3.png" alt="Illustration 3">
     </a>
 
     <!-- IMAGE 4 -->
     <a data-fslightbox="gallery" href="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png">
-        <img src="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Dungeon Meshi">
+        <img src="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png" alt="Dungeon Meshi">
     </a>
-
-<!--next row-->
 
     <!-- IMAGE 5 -->
     <a data-fslightbox="gallery" href="/images/illustration4.png">
-        <img src="/images/illustration4.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 1">
+        <img src="/images/illustration4.png" alt="Illustration 4">
     </a>
 
     <!-- IMAGE 6 -->
     <a data-fslightbox="gallery" href="/images/illustration5.png">
-        <img src="/images/illustration5.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 2">
+        <img src="/images/illustration5.png" alt="Illustration 5">
     </a>
 
     <!-- IMAGE 7 -->
     <a data-fslightbox="gallery" href="/images/illustration6.jpg">
-        <img src="/images/illustration6.jpg"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 3">
+        <img src="/images/illustration6.jpg" alt="Illustration 6">
     </a>
 
     <!-- IMAGE 8 -->
     <a data-fslightbox="gallery" href="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png">
-        <img src="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Dungeon Meshi">
+        <img src="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png" alt="Dungeon Meshi">
     </a>
 
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
-<!--END HERE------------------------------------------------------------------------>
+
+<!-- END HERE -------------------------------------------------------------->
 
     </details>
 
@@ -862,147 +861,99 @@ hr {
 
     </div>
 
-    <!--TEST BEGIN-->
-    <details>
-    <summary>View Gallery</summary>
+    <!-- Image Gallery START HERE ---------------------------------------------->
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<style>
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
-    <style>
-    .swiper {
+.gallery a {
+    flex: 0 0 auto;
+}
+
+.gallery img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+/* Mobile: 2 images per row */
+@media (max-width: 768px) {
+    .gallery {
+        gap: 12px;
+    }
+
+    .gallery a {
+        width: calc(50% - 6px);
+    }
+
+    .gallery img {
         width: 100%;
-        padding: 20px 50px;
+        height: auto;
+        aspect-ratio: 1 / 1;
     }
+}
+</style>
 
-    .swiper-slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+<div class="gallery">
 
-    .swiper-slide img {
-        width: 220px;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 10px;
-        transition: .25s;
-        cursor: pointer;
-    }
+    <!-- IMAGE 1 -->
+    <a data-fslightbox="gallery" href="/images/illustration1.png">
+        <img src="/images/illustration1.png" alt="Illustration 1">
+    </a>
 
-    .swiper-slide img:hover{
-        transform:scale(1.05);
-    }
+    <!-- IMAGE 2 -->
+    <a data-fslightbox="gallery" href="/images/illustration2.png">
+        <img src="/images/illustration2.png" alt="Illustration 2">
+    </a>
 
-    .swiper-button-next,
-    .swiper-button-prev{
-        color:white;
-    }
+    <!-- IMAGE 3 -->
+    <a data-fslightbox="gallery" href="/images/illustration3.png">
+        <img src="/images/illustration3.png" alt="Illustration 3">
+    </a>
 
-    .swiper-pagination-bullet-active{
-        background:white;
-    }
-    </style>
+    <!-- IMAGE 4 -->
+    <a data-fslightbox="gallery" href="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png">
+        <img src="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png" alt="Dungeon Meshi">
+    </a>
 
-    <div class="swiper myGallery">
+    <!-- IMAGE 5 -->
+    <a data-fslightbox="gallery" href="/images/illustration4.png">
+        <img src="/images/illustration4.png" alt="Illustration 4">
+    </a>
 
-        <div class="swiper-wrapper">
+    <!-- IMAGE 6 -->
+    <a data-fslightbox="gallery" href="/images/illustration5.png">
+        <img src="/images/illustration5.png" alt="Illustration 5">
+    </a>
 
-            <div class="swiper-slide">
-                <a data-fslightbox="gallery" href="/images/illustration1.png">
-                    <img src="/images/illustration1.png" alt="">
-                </a>
-            </div>
+    <!-- IMAGE 7 -->
+    <a data-fslightbox="gallery" href="/images/illustration6.jpg">
+        <img src="/images/illustration6.jpg" alt="Illustration 6">
+    </a>
 
-            <div class="swiper-slide">
-                <a data-fslightbox="gallery" href="/images/illustration2.png">
-                    <img src="/images/illustration2.png" alt="">
-                </a>
-            </div>
+    <!-- IMAGE 8 -->
+    <a data-fslightbox="gallery" href="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png">
+        <img src="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png" alt="Dungeon Meshi">
+    </a>
 
-            <div class="swiper-slide">
-                <a data-fslightbox="gallery" href="/images/illustration3.png">
-                    <img src="/images/illustration3.png" alt="">
-                </a>
-            </div>
+</div>
 
-            <div class="swiper-slide">
-                <a data-fslightbox="gallery" href="/images/illustration4.png">
-                    <img src="/images/illustration4.png" alt="">
-                </a>
-            </div>
+<script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
 
-            <div class="swiper-slide">
-                <a data-fslightbox="gallery" href="/images/illustration5.png">
-                    <img src="/images/illustration5.png" alt="">
-                </a>
-            </div>
-
-            <div class="swiper-slide">
-                <a data-fslightbox="gallery" href="/images/illustration6.jpg">
-                    <img src="/images/illustration6.jpg" alt="">
-                </a>
-            </div>
-
-            <div class="swiper-slide">
-                <a data-fslightbox="gallery" href="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png">
-                    <img src="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png" alt="">
-                </a>
-            </div>
-
-        </div>
-
-        <!-- Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-
-        <!-- Dots -->
-        <div class="swiper-pagination"></div>
-
-    </div>
-
-    <!-- Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Lightbox -->
-    <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
-
-    <script>
-    const swiper = new Swiper(".myGallery", {
-
-        loop:true,
-
-        slidesPerView:1,
-
-        spaceBetween:20,
-
-        centeredSlides:true,
-
-        navigation:{
-            nextEl:".swiper-button-next",
-            prevEl:".swiper-button-prev"
-        },
-
-        pagination:{
-            el:".swiper-pagination",
-            clickable:true
-        },
-
-        breakpoints:{
-            500:{
-                slidesPerView:2
-            },
-            800:{
-                slidesPerView:3
-            },
-            1200:{
-                slidesPerView:4
-            }
-        }
-
-    });
-    </script>
-
+<!-- END HERE -------------------------------------------------------------->
 </details>
+
 <!--TEST ENDS HERE-->
