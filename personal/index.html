@@ -708,100 +708,101 @@ hr {
 
     </div>
 
-    <details class="gallery">
 
-        <summary>View Gallery</summary>
 
         <!-- Image Gallery START HERE ---------------------------------------------->
 
 <style>
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery a {
+    flex: 0 0 auto;
+}
+
+.gallery img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+/* Mobile: 2 images per row */
+@media (max-width: 768px) {
     .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+        gap: 12px;
+    }
+
+    .gallery a {
+        width: calc(50% - 6px);
     }
 
     .gallery img {
-        width: 220px;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: transform 0.2s ease, opacity 0.2s ease;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
     }
-
-    .gallery img:hover {
-        transform: scale(1.05);
-        opacity: 0.85;
-    }
+}
 </style>
-
 
 <div class="gallery">
 
     <!-- IMAGE 1 -->
     <a data-fslightbox="gallery" href="/images/illustration1.png">
-        <img src="/images/illustration1.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 1">
+        <img src="/images/illustration1.png" alt="Illustration 1">
     </a>
 
     <!-- IMAGE 2 -->
     <a data-fslightbox="gallery" href="/images/illustration2.png">
-        <img src="/images/illustration2.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 2">
+        <img src="/images/illustration2.png" alt="Illustration 2">
     </a>
 
     <!-- IMAGE 3 -->
     <a data-fslightbox="gallery" href="/images/illustration3.png">
-        <img src="/images/illustration3.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 3">
+        <img src="/images/illustration3.png" alt="Illustration 3">
     </a>
 
     <!-- IMAGE 4 -->
     <a data-fslightbox="gallery" href="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png">
-        <img src="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Dungeon Meshi">
+        <img src="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png" alt="Dungeon Meshi">
     </a>
-
-<!--next row-->
 
     <!-- IMAGE 5 -->
     <a data-fslightbox="gallery" href="/images/illustration4.png">
-        <img src="/images/illustration4.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 1">
+        <img src="/images/illustration4.png" alt="Illustration 4">
     </a>
 
     <!-- IMAGE 6 -->
     <a data-fslightbox="gallery" href="/images/illustration5.png">
-        <img src="/images/illustration5.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 2">
+        <img src="/images/illustration5.png" alt="Illustration 5">
     </a>
 
     <!-- IMAGE 7 -->
     <a data-fslightbox="gallery" href="/images/illustration6.jpg">
-        <img src="/images/illustration6.jpg"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Illustration 3">
+        <img src="/images/illustration6.jpg" alt="Illustration 6">
     </a>
 
     <!-- IMAGE 8 -->
     <a data-fslightbox="gallery" href="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png">
-        <img src="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png"
-             style="width:220px; height:220px; object-fit:cover; border-radius:10px; cursor:pointer;"
-             alt="Dungeon Meshi">
+        <img src="/images/kylaFulton_DungeonMeshiPrint_PNGFiletype.png" alt="Dungeon Meshi">
     </a>
 
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
-<!--END HERE------------------------------------------------------------------------>
+
+<!-- END HERE -------------------------------------------------------------->
 
     </details>
 

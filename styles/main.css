@@ -183,6 +183,19 @@ header {
 
 /*NAVIBAR LOGO SIZE ENDS*/
 
+/*IMAGE MOBILE STACKING*/
+@media (max-width: 768px) {
+    .gallery a {
+        width: calc(50% - 6px);
+    }
+
+    .gallery img {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1;
+    }
+}
+
 
 /*BEGIN CAROUSEL CSS??*/
 body {
