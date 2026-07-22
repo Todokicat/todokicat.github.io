@@ -183,6 +183,27 @@ header {
 
 /*NAVIBAR LOGO SIZE ENDS*/
 
+
+/*IMAGE FLOATING ANIMATION*/
+.floating-image {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/*FLOATING ANIMATION END*/
+
+
+
 /*IMAGE MOBILE STACKING*/
 @media (max-width: 768px) {
     .gallery a {
