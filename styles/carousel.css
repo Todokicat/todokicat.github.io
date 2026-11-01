@@ -47,3 +47,32 @@
 .dot.active {
     background: white;
 }
+
+/*  BANNER */
+:root {
+    --banner-height: 400px;
+}
+
+.carousel-container {
+    width: 100%;
+    height: var(--banner-height);
+    overflow: hidden;
+}
+
+.carousel-track {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
