@@ -686,6 +686,25 @@ article {
 }
 
 /*CSS FOR THE BUBBLE GIF ON HOME PAGE*/
+.video-area {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.video-info {
+    flex: 0 0 35%;
+}
+
+.embedded-video {
+    flex: 1;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    min-width: 0;
+    border: none;
+}
+
 .project-image-container {
     position: relative;
     display: inline-block;
@@ -696,7 +715,6 @@ article {
     display: block;
     width: 100%;
     height: auto;
-    max-width: 100%;
 }
 
 .image-overlay-text {
