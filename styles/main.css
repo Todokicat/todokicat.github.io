@@ -689,12 +689,14 @@ article {
 .project-image-container {
     position: relative;
     display: inline-block;
+    width: 50%;
 }
 
 .project-image {
     display: block;
-    width: 50%
+    width: 100%;
     height: auto;
+    max-width: 100%;
 }
 
 .image-overlay-text {
@@ -702,7 +704,6 @@ article {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     color: white;
     font-size: 20px;
     font-weight: bold;
