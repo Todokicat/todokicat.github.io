@@ -647,3 +647,33 @@ body {
     height: auto;
     z-index: 2;
 }
+
+/*CSS for about me image*/
+/* Desktop view */
+.about-me-image {
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+    .about-me-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .about-me-image.floating-image {
+        float: none;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
