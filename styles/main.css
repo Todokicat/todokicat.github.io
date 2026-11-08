@@ -4,7 +4,9 @@ html {
     margin: 0;
     padding: 0;
 }
-
+.card-text {
+    font-family: 'Tilt Warp', sans-serif;
+}
 header {
     border-block-end: thin solid #444;
 }
@@ -847,3 +849,69 @@ article.about-me {
 
 }
 
+/*about me cloud framing in about me*/
+/* Cloud frame wrapper */
+.cloud-frame {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+/* Outer spinning cloud */
+.cloud-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #ffb6d9;
+    border-radius: 45% 55% 60% 40% / 55% 40% 60% 45%;
+    animation: cloudSpin 12s linear infinite;
+    z-index: 0;
+}
+
+/* Inner cloud */
+.cloud-frame::after {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    background: #ffbfbf;
+    border-radius: 55% 45% 40% 60% / 40% 60% 45% 55%;
+    animation: cloudSpin 12s linear infinite reverse;
+    z-index: 1;
+}
+
+/* Image */
+.cloud-frame img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    display: block;
+}
+
+/* Rotation */
+@keyframes cloudSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .cloud-frame {
+        width: 300px;
+        height: 300px;
+    }
+
+    .cloud-frame img {
+        width: 260px;
+        height: 260px;
+    }
+}
