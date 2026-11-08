@@ -916,17 +916,24 @@ article.about-me {
     }
 }
 
-/* Keep wavy titles on one line */
+/* Apply shrinking to all wavy titles */
 .wavy-text {
     white-space: nowrap;
     font-size: clamp(14px, 4vw, 32px);
     width: 100%;
 }
 
-/* Smaller mobile screens */
+/* Mobile adjustments */
 @media (max-width: 600px) {
     .wavy-text {
         font-size: clamp(11px, 4vw, 22px);
         letter-spacing: -1px;
+    }
+
+    /* EXCLUDE homepage intro heading */
+    .intro .wavy-text {
+        white-space: normal;
+        font-size: inherit;
+        letter-spacing: normal;
     }
 }
