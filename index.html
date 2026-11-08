@@ -331,56 +331,168 @@
 
             
 
+
+
 <div class="video-gallery">
 
-    <!-- Featured Main Video -->
-    <div class="featured-video">
-      
+    <div class="video-carousel">
 
-        <div class="video-frame featured-frame">
-            <iframe
-                src="https://www.youtube-nocookie.com/embed/YrJQhNPh3SA"
-                title="Featured Demo Reel"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-<hr style="height: 3px; background-color: #ff69b4; border: none; width: 90%; margin: 50px auto;">
-    <!-- Video Gallery -->
-    <div class="video-grid">
+        <h2 class="video-title" id="videoTitle">
+            Featured Demo Reel
+        </h2>
 
-        <div class="video-card">
-            <div class="video-frame">
-                <iframe src="https://www.youtube-nocookie.com/embed/YrJQhNPh3SA"
-                    title="Project Video 1" allowfullscreen></iframe>
+        <div class="carousel-main">
+
+            <button class="carousel-arrow"
+                id="prevVideo" aria-label="Previous video">
+                &#10094;
+            </button>
+
+            <div class="video-container">
+                <iframe
+                    id="carouselVideo"
+                    src="https://www.youtube-nocookie.com/embed/YrJQhNPh3SA"
+                    title="Featured Demo Reel"
+                    allowfullscreen>
+                </iframe>
             </div>
+
+            <button class="carousel-arrow"
+                id="nextVideo" aria-label="Next video">
+                &#10095;
+            </button>
+
         </div>
 
-        
-
-        <div class="video-card">
-            <div class="video-frame">
-                <iframe src="https://www.youtube-nocookie.com/embed/YrJQhNPh3SA"
-                    title="Project Video 2" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <div class="video-card">
-            <div class="video-frame">
-                <iframe src="https://www.youtube-nocookie.com/embed/YrJQhNPh3SA"
-                    title="Project Video 3" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <div class="video-card">
-            <div class="video-frame">
-                <iframe src="https://www.youtube-nocookie.com/embed/YrJQhNPh3SA"
-                    title="Project Video 4" allowfullscreen></iframe>
-            </div>
-        </div>
+        <div class="carousel-indicators"
+            id="carouselIndicators"></div>
 
     </div>
+
 </div>
+
+
+<!-- VIDEO CAROUSEL JAVASCRIPT -->
+
+
+<script>
+
+(function () {
+
+    function initializeCarousel() {
+
+        const videos = [
+    {
+        title: `<span style="color:#e63868;">F</span><span style="color:#369edb;">E</span><span style="color:#d9ad00;">A</span><span style="color:#54b94d;">T</span><span style="color:#9368df;">U</span><span style="color:#e63868;">R</span><span style="color:#369edb;">E</span><span style="color:#d9ad00;">D</span> &nbsp; <span style="color:#54b94d;">D</span><span style="color:#9368df;">E</span><span style="color:#e63868;">M</span><span style="color:#369edb;">O</span> &nbsp; <span style="color:#d9ad00;">R</span><span style="color:#54b94d;">E</span><span style="color:#9368df;">E</span><span style="color:#e63868;">L</span>`,
+                id: "YrJQhNPh3SA"
+    },
+    {
+    title: `<span style="color:#e63868;">V</span><span style="color:#369edb;">O</span><span style="color:#d9ad00;">I</span><span style="color:#54b94d;">C</span><span style="color:#9368df;">E</span> &nbsp; <span style="color:#e63868;">A</span><span style="color:#369edb;">C</span><span style="color:#d9ad00;">T</span><span style="color:#54b94d;">I</span><span style="color:#9368df;">N</span><span style="color:#e63868;">G</span> &nbsp; <span style="color:#369edb;">R</span><span style="color:#d9ad00;">E</span><span style="color:#54b94d;">E</span><span style="color:#9368df;">L</span>`,
+                id: "YOUR_SECOND_VIDEO_ID"
+},
+{
+    title: `<span style="color:#e63868;">G</span><span style="color:#369edb;">R</span><span style="color:#d9ad00;">A</span><span style="color:#54b94d;">P</span><span style="color:#9368df;">H</span><span style="color:#e63868;">I</span><span style="color:#369edb;">C</span> &nbsp; <span style="color:#d9ad00;">D</span><span style="color:#54b94d;">E</span><span style="color:#9368df;">S</span><span style="color:#e63868;">I</span><span style="color:#369edb;">G</span><span style="color:#d9ad00;">N</span> &nbsp; <span style="color:#54b94d;">R</span><span style="color:#9368df;">E</span><span style="color:#e63868;">E</span><span style="color:#369edb;">L</span>`,
+                id: "YOUR_THIRD_VIDEO_ID"
+}
+];
+
+        let currentVideo = 0;
+        let autoRotate;
+
+        const iframe = document.getElementById("carouselVideo");
+        const title = document.getElementById("videoTitle");
+        const indicators = document.getElementById("carouselIndicators");
+
+        if (!iframe || !title || !indicators) return;
+
+        // Create dots
+
+        indicators.innerHTML = "";
+
+        videos.forEach((video, index) => {
+
+            const dot = document.createElement("button");
+
+            dot.className = "carousel-dot";
+            dot.setAttribute("aria-label", video.title);
+
+            dot.addEventListener("click", function () {
+                showVideo(index);
+                restartTimer();
+            });
+
+            indicators.appendChild(dot);
+
+        });
+
+        // Display video
+
+        function showVideo(index) {
+
+            currentVideo = (index + videos.length) % videos.length;
+
+            title.innerHTML = '<span class="wavy-text">' +
+    videos[currentVideo].title +
+    '</span>';
+
+            iframe.src =
+                "https://www.youtube-nocookie.com/embed/" +
+                videos[currentVideo].id;
+
+            updateDots();
+
+        }
+
+        // Update dots
+
+        function updateDots() {
+
+            const dots = indicators.querySelectorAll(".carousel-dot");
+
+            dots.forEach((dot, index) => {
+
+                dot.classList.toggle("active", index === currentVideo);
+
+            });
+
+        }
+
+        // Next and previous arrows
+
+        document.getElementById("nextVideo").onclick = function () {
+
+            showVideo(currentVideo + 1);
+            restartTimer();
+
+        };
+
+        document.getElementById("prevVideo").onclick = function () {
+
+            showVideo(currentVideo - 1);
+            restartTimer();
+
+        };
+       
+        // Start carousel
+
+        showVideo(0);
+        startTimer();
+
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initializeCarousel);
+    } else {
+        initializeCarousel();
+    }
+
+})();
+
+</script>
+
+
+
+
 
 
 
