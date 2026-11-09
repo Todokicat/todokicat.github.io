@@ -1,3 +1,49 @@
+<!-- BACK TO TOP BUTTON -->
+
+<style>
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #9368df;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.back-to-top:hover {
+    background: #b48cff;
+    transform: scale(1.12);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .back-to-top {
+        width: 42px;
+        height: 42px;
+        font-size: 21px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+</style>
+
+<a href="#" class="back-to-top" aria-label="Back to top">
+    ↑
+</a>
+
+<!-- END BACK TO TOP BUTTON -->
+
 <!---TOP BANNER--->
 <!DOCTYPE html>
 <html>
@@ -439,58 +485,77 @@ html {
 }
 
 /* MOBILE */
-
 @media (max-width: 600px) {
 
     .project-showcase {
-        margin: 16px auto;
-        padding: 0 9px;
+        width: 100%;
+        max-width: 100%;
+        margin: 12px auto;
+        padding: 0 3px;
+        box-sizing: border-box;
     }
 
+    /* Slightly larger title images */
     .project-title {
-        width: 48%;
-        max-width: 190px;
-        margin-bottom: 7px;
+        width: 42%;
+        max-width: 170px;
+        margin-bottom: 5px;
     }
 
+    /* MAXIMIZE VIDEO SIZE */
+    .project-video {
+        width: 100%;
+        max-width: none;
+        aspect-ratio: 16 / 9;
+        margin: 5px auto;
+    }
+
+    /* Smaller descriptions */
     .project-description {
-        font-size: 12px;
-        margin: 6px auto 8px;
+        font-size: 11px;
+        line-height: 1.3;
+        margin: 5px auto 6px;
+        padding: 0 8px;
     }
 
+    /* SMALLER CONTRIBUTION BUBBLES */
     .project-credits {
-        gap: 6px;
-        margin: 7px auto 10px;
+        gap: 4px;
+        margin: 5px auto 7px;
     }
 
     .project-credits li {
-        font-size: 11px;
-        padding: 6px 10px;
+        font-size: 9px;
+        padding: 4px 8px;
+        border-radius: 20px;
     }
 
+    /* SOFTWARE + BUTTON */
     .project-bottom-row {
-        gap: 10px;
+        gap: 7px;
+        margin-top: 5px;
     }
 
     .project-software {
-        gap: 8px;
+        gap: 5px;
     }
 
     .project-software img {
-        height: 23px;
+        height: 18px;
     }
 
+    /* SMALLER LEARN MORE BUTTON */
     .project-learn-more {
-        font-size: 11px;
-        padding: 7px 15px;
+        font-size: 9px;
+        padding: 5px 11px;
+        border-radius: 20px;
     }
 
     .project-divider {
-        margin: 14px auto;
+        margin: 10px auto;
     }
 
 }
-
 </style>
 
 
