@@ -257,7 +257,7 @@
                     <!-- WAVY TEXT END -->
 
 
-                    <p>
+                    <center><p>
                         My name is Kyla and I have a love for storytelling.
                         I focus in visual development and storyboarding, but I
                         also enjoy animating. You will often find me working on
@@ -289,20 +289,32 @@
 
                     <!-- PERSONAL PROJECTS IMAGE -->
 
-                    <div style="display:flex; justify-content:center;">
+                    <!-- PERSONAL PROJECTS IMAGE -->
 
-                        <a href="https://kylafulton.com/personal"
-                           style="display:inline-block; transition:transform .3s;">
+<div style="display:flex; justify-content:center; margin-top:25px;">
 
-                            <img src="/images/personal-projects.png"
-                                 alt="Personal Projects"
-                                 style="width:200px;"
-                                 onmouseover="this.parentElement.style.transform='scale(1.15)'"
-                                 onmouseout="this.parentElement.style.transform='scale(1)'">
+    <a href="https://kylafulton.com/personal"
+       style="display:inline-block; animation: slowPulse 3s ease-in-out infinite;">
 
-                        </a>
+        <img src="/images/personal-projects.png"
+             alt="Personal Projects"
+             style="width:200px; display:block;">
 
-                    </div>
+    </a>
+
+</div>
+
+<style>
+@keyframes slowPulse {
+    30%, 100% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(1.06);
+    }
+}
+</style>
+
 
 
                     <!-- CONTACT BUTTON -->
@@ -328,23 +340,24 @@
 
                     <!-- SOCIAL MEDIA LINKS -->
 
-                    <div style="text-align:center;">
+                
 
-                        <a href="https://www.linkedin.com/in/kyla-fulton-85b289259/">
-                            <img src="/images/linkedin-logo.png" width="50">
-                        </a>
+                        <!-- SOCIAL MEDIA LINKS -->
 
-                        <a href="https://www.youtube.com/@Kyla_Fulton">
-                            <img src="/images/youtube-logo.png" width="50">
-                        </a>
 
-                        <a href="https://bsky.app/profile/kylafulton.bsky.social">
-                            <img src="/images/bluesky-logo.png" width="50">
-                        </a>
+    <a href="https://www.linkedin.com/in/kyla-fulton-85b289259/" style="margin: 0 20px;">
+        <img src="/images/linkedin-logo.png" width="50">
+    </a>
 
-                    </div>
+    <a href="https://www.youtube.com/@Kyla_Fulton" style="margin: 0 20px;">
+        <img src="/images/youtube-logo.png" width="50">
+    </a>
 
-                </div>
+    <a href="https://bsky.app/profile/kylafulton.bsky.social" style="margin: 0 20px;">
+        <img src="/images/bluesky-logo.png" width="50">
+    </a>
+
+</div>
 
 
                 <!-- RIGHT SIDE: SPINNING CLOUD IMAGE -->
