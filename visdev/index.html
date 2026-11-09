@@ -155,7 +155,7 @@
 
         <!----------------------------------------------------->
         <!---TEST SECTION BEGINS FOR UHHH BUTTONS THAT SCROLL-->
-        <style>
+     <style>
     html {
         scroll-behavior: smooth;
     }
@@ -164,6 +164,16 @@
         display: flex;
         gap: 20px;
         justify-content: center;
+    }
+
+    .card {
+        overflow: hidden;
+    }
+
+    .card a {
+        display: block;
+        position: relative;
+        overflow: hidden;
     }
 
     .card img {
@@ -177,6 +187,49 @@
     .card img:hover {
         transform: scale(1.05);
     }
+
+    /* SHINE EFFECT */
+   /* Allow glow to extend beyond image containers */
+.card,
+.card a {
+    overflow: visible;
+}
+
+.card img {
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+/* MonsterShock - Dark purple glow */
+.card:nth-child(1) img:hover {
+    filter:
+        drop-shadow(0 0 8px #315b8e)
+        drop-shadow(0 0 8px #451b63);
+    transform: scale(1.08);
+}
+
+/* My Guardian Angel - Pastel yellow glow */
+.card:nth-child(2) img:hover {
+    filter:
+        drop-shadow(0 0 8px #ffc36abf)
+        drop-shadow(0 0 8px #ffdc73c0);
+    transform: scale(1.08);
+}
+
+/* Go Nova! - Bright yellow glow */
+.card:nth-child(3) img:hover {
+    filter:
+        drop-shadow(0 0 8px #7d0079)
+        drop-shadow(0 0 8px #572e7b);
+    transform: scale(1.08);
+}
+
+/* Curiosity Killed Cat - Dark red glow */
+.card:nth-child(4) img:hover {
+    filter:
+        drop-shadow(0 0 8px #a00020)
+        drop-shadow(0 0 8px #570010);
+    transform: scale(1.08);
+}
 
     /* MOBILE: 2 cards per row */
     @media (max-width: 600px) {
