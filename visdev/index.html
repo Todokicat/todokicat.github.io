@@ -156,27 +156,49 @@
         <!----------------------------------------------------->
         <!---TEST SECTION BEGINS FOR UHHH BUTTONS THAT SCROLL-->
         <style>
-          html {
-            scroll-behavior: smooth;
-          }
+    html {
+        scroll-behavior: smooth;
+    }
 
-          .card-row {
-            display: flex;
-            gap: 20px;
-          }
+    .card-row {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
 
-          .card img {
-            width: 144px;
-            height: 144px;
-            object-fit: cover;
-            border-radius: 12px;
-            transition: transform 0.3s ease;
-          }
+    .card img {
+        width: 144px;
+        height: 144px;
+        object-fit: cover;
+        border-radius: 12px;
+        transition: transform 0.3s ease;
+    }
 
-          .card img:hover {
-            transform: scale(1.05);
-          }
-        </style>
+    .card img:hover {
+        transform: scale(1.05);
+    }
+
+    /* MOBILE: 2 cards per row */
+    @media (max-width: 600px) {
+        .card-row {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+            justify-items: center;
+        }
+
+        .card {
+            width: 100%;
+            min-width: 0;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
+</style>
 
         <!-- IMAGE BUTTONS -->
         <div class="card-row">
