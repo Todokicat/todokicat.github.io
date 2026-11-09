@@ -279,295 +279,371 @@ html {
 
 <hr>
 
-   <!--- VIDEO SECTION --->
-            <section class="video-section" style="text-align: center; margin-top: 50px; margin-bottom: 50px;">
+   
+<!-- COMPACT ANIMATION PROJECT SHOWCASE --------------------------------------------->
 
-                <!-- First Video PLACEHOLD --
-                <h2 class="video-title">Unwind</h2>
-                <p style="max-width: 900px; margin: 0 auto 80px auto;">
-                A wizard is reminded to take breaks
-                    
-                
-                <div style="display: flex; justify-content: center; margin: 40px 0;">
-                    <iframe width="900" height="500" src="https://www.youtube.com/embed/T2Qy3lSGZzo"
-                        title="" frameborder="0" allowfullscreen>
-                    </iframe>
-                </div>
+<style>
 
-                <p style="max-width: 900px; margin: 0 auto 80px auto;">
-                    A UAH Student Film made in ToonBoom Harmony. I helped with rough animation, in-betweens, coloring, and shading.
-                </p>--->
+.project-showcase {
+    max-width: 850px;
+    margin: 22px auto;
+    padding: 0 12px;
+    text-align: center;
+}
 
-<!------------------------------------------------- FIRST VIDEO ------------------------------->
+/* TITLE IMAGE */
+
+.project-title {
+    display: block;
+    width: 32%;
+    max-width: 260px;
+    height: auto;
+    margin: 0 auto 8px;
+}
+
+/* VIDEO */
+
+.project-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto 8px;
+}
+
+.project-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* DESCRIPTION */
+
+.project-description {
+    max-width: 600px;
+    margin: 7px auto 10px;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+/* CONTRIBUTION BUBBLES */
+
+.project-credits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px;
+    margin: 8px auto 12px;
+    padding: 0;
+    list-style: none;
+}
+
+.project-credits li {
+    padding: 6px 13px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.project-credits li:hover {
+    transform: translateY(-2px);
+}
+
+/* UNWIND COLORS */
+
+.unwind-credits li:nth-child(1) {
+    background: #315b8e;
+}
+
+.unwind-credits li:nth-child(2) {
+    background: #5279a8;
+}
+
+.unwind-credits li:nth-child(3) {
+    background: #9368b8;
+}
+
+.unwind-credits li:nth-child(4) {
+    background: #b45c85;
+}
+
+/* THE END COLORS */
+
+.end-credits li:nth-child(1) {
+    background: #7d0079;
+}
+
+.end-credits li:nth-child(2) {
+    background: #a34a9c;
+}
+
+.end-credits li:nth-child(3) {
+    background: #572e7b;
+}
+
+/* SOFTWARE + LEARN MORE ROW */
+
+.project-bottom-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 8px auto 0;
+}
+
+/* SOFTWARE LOGOS */
+
+.project-software {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-software img {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* LEARN MORE BUTTON */
+
+.project-learn-more {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 25px;
+    background: #9368df;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.project-learn-more:hover {
+    background: #b48cff;
+    transform: scale(1.05);
+}
+
+/* DIVIDERS */
+
+.project-divider {
+    max-width: 850px;
+    margin: 18px auto;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .project-showcase {
+        margin: 16px auto;
+        padding: 0 9px;
+    }
+
+    .project-title {
+        width: 48%;
+        max-width: 190px;
+        margin-bottom: 7px;
+    }
+
+    .project-description {
+        font-size: 12px;
+        margin: 6px auto 8px;
+    }
+
+    .project-credits {
+        gap: 6px;
+        margin: 7px auto 10px;
+    }
+
+    .project-credits li {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+    .project-bottom-row {
+        gap: 10px;
+    }
+
+    .project-software {
+        gap: 8px;
+    }
+
+    .project-software img {
+        height: 23px;
+    }
+
+    .project-learn-more {
+        font-size: 11px;
+        padding: 7px 15px;
+    }
+
+    .project-divider {
+        margin: 14px auto;
+    }
+
+}
+
+</style>
 
 
+<!-- ================================= -->
+<!-- PROJECT 1: UNWIND -->
+<!-- ================================= -->
 
+<section class="project-showcase" id="unwind">
 
-<!-- PROJECT HEADER (IMAGE VERSION) -->
-<div style="
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  margin-bottom:20px;
-">
+    <img class="project-title"
+         src="/images/TitleUnwind.png"
+         alt="Unwind">
 
-  <img src="/images/TitleUnwind.png" 
-       alt="Unwind - UAH Student Short Film 2026"
-       style="
-         width:50%;
-         max-width:600px;
-         height:auto;
-       ">
+    <div class="project-video">
+        <iframe
+            src="https://www.youtube.com/embed/T2Qy3lSGZzo"
+            title="Unwind - UAH Student Film"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </div>
 
-</div>
-
-<!-- VIDEO -->
-<div style="display:flex; justify-content:center; margin:40px 0;">
-
-  <iframe
-    width="900"
-    height="500"
-    src="https://www.youtube.com/embed/T2Qy3lSGZzo"
-    title="Second Animatic Video"
-    frameborder="0"
-    allowfullscreen>
-  </iframe>
-
-</div>
-
-
-<!-- PROJECT HEADER -->
-<div style="
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
-  gap:60px;
-  flex-wrap:wrap;
-  margin-bottom:20px;
-">
-
-  <!-- LEFT SIDE: TITLE + DESCRIPTION -->
-  <div style="
-    max-width:600px;
-    text-align:center;
-  ">
-
-    <p style="margin-top:8px; margin-bottom:50px; line-height:1.5;">
-      A UAH student film about an overworked wizard that gets reminded of the importance of taking breaks
+    <p class="project-description">
+        A UAH student film about an overworked wizard
+        who is reminded of the importance of taking breaks.
     </p>
-  </div>
 
-  <!-- RIGHT SIDE: BULLETS + SOFTWARE LOGOS -->
-  <div style="
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:20px;
-  ">
-
-    <!-- BULLET POINTS -->
-    <ul style="
-      line-height:1.8;
-      padding-left:20px;
-      text-align:left;
-    ">
-      <li>Rough Animation</li>
-      <li>In-Betweens</li>
-      <li>Coloring & Shading</li>
-      <li>Credits Compositing</li>
+    <ul class="project-credits unwind-credits">
+        <li>Rough Animation</li>
+        <li>In-Betweens</li>
+        <li>Coloring & Shading</li>
+        <li>Credits Compositing</li>
     </ul>
 
-    <!-- SOFTWARE LOGOS -->
-    <div style="
-      display:flex;
-      align-items:center;
-      gap:12px;
-      flex-wrap:wrap;
-    ">
+    <div class="project-bottom-row">
 
-      <img src="/images/toonboomharmony-logo.png"
-        alt="Toon Boom Harmony"
-        style="height:40px; width:auto;">
+        <div class="project-software">
+            <img src="/images/toonboomharmony-logo.png"
+                 alt="Toon Boom Harmony">
 
-      <img src="/images/tortoisesvn-logo.png"
-        alt="TortoiseSVN"
-        style="height:40px; width:auto;">
+            <img src="/images/tortoisesvn-logo.png"
+                 alt="TortoiseSVN">
 
-      <img src="/images/davinciresolve-logo.png"
-        alt="davinci resolve"
-        style="height:40px; width:auto;">
+            <img src="/images/davinciresolve-logo.png"
+                 alt="DaVinci Resolve">
 
-      <img src="/images/trello-logo.png"
-        alt="trello"
-        style="height:40px; width:auto;">
+            <img src="/images/trello-logo.png"
+                 alt="Trello">
+        </div>
+
+        <a href="#unwind-details" class="project-learn-more">
+            Learn More
+        </a>
 
     </div>
 
-  </div>
-
-</div>
-
-<!--SCROLL TO VIDEO The End-->
-<section id="theend" style="position: relative; top: -100px;">
-    <h2></h2>
 </section>
 
-<!--DIVIDE LINE-->
-<hr>
-
-<!------------------------------------------- SECOND VIDEO -------------------------->
-<!------------------------------------------- SECOND VIDEO -------------------------->
-<!------------------------------------------- SECOND VIDEO -------------------------->
-<!------------------------------------------- SECOND VIDEO -------------------------->
+<hr class="project-divider">
 
 
-<!-- PROJECT HEADER (IMAGE VERSION) -->
-<div style="
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  margin-top:50px;
-  margin-bottom:20px;
-">
+<!-- ================================= -->
+<!-- PROJECT 2: THE END -->
+<!-- ================================= -->
 
-  <img src="/images/TitleTheEnd.png" 
-       alt="The End - UAH Student Short Film 2025"
-       style="
-         width:50%;
-         max-width:500px;
-         height:auto;
-       ">
+<section class="project-showcase" id="theend">
 
-</div>
+    <img class="project-title"
+         src="/images/TitleTheEnd.png"
+         alt="The End">
 
-<!-- VIDEO -->
-<div style="display:flex; justify-content:center; margin:40px 0;">
+    <div class="project-video">
+        <iframe
+            src="https://www.youtube.com/embed/4muvu720L5w"
+            title="The End - UAH Student Film"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </div>
 
-  <iframe
-    width="900"
-    height="500"
-    src="https://www.youtube.com/embed/4muvu720L5w"
-    title="Second Animatic Video"
-    frameborder="0"
-    allowfullscreen>
-</iframe>
-
-</div>
-
-
-<!-- PROJECT HEADER -->
-<div style="
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
-  gap:60px;
-  flex-wrap:wrap;
-  margin-bottom:20px;
-">
-
-  <!-- LEFT SIDE: TITLE + DESCRIPTION -->
-  <div style="
-    max-width:600px;
-    text-align:center;
-  ">
-
-    <p style="margin-top:8px; margin-bottom:50px; line-height:1.5;">
-      A UAH student film about Magical girls defending against alien invaders 
+    <p class="project-description">
+        A UAH student film about magical girls defending
+        against alien invaders.
     </p>
-  </div>
 
-  <!-- RIGHT SIDE: BULLETS + SOFTWARE LOGOS -->
-  <div style="
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:20px;
-  ">
-
-    <!-- BULLET POINTS -->
-    <ul style="
-      line-height:1.8;
-      margin:0;
-      padding-left:20px;
-      text-align:left;
-    ">
-      <li>Cleanup Animation</li>
-      <li>Coloring & Shading</li>
-      <li>Compositing</li>
+    <ul class="project-credits end-credits">
+        <li>Cleanup Animation</li>
+        <li>Coloring & Shading</li>
+        <li>Compositing</li>
     </ul>
 
-    <!-- SOFTWARE LOGOS -->
-    <div style="
-      display:flex;
-      align-items:center;
-      gap:12px;
-      flex-wrap:wrap;
-    ">
+    <div class="project-bottom-row">
 
-      <img src="/images/toonboomharmony-logo.png"
-        alt="Toon Boom Harmony"
-        style="height:40px; width:auto;">
+        <div class="project-software">
+            <img src="/images/toonboomharmony-logo.png"
+                 alt="Toon Boom Harmony">
 
-      <img src="/images/tortoisesvn-logo.png"
-        alt="TortoiseSVN"
-        style="height:40px; width:auto;">
+            <img src="/images/tortoisesvn-logo.png"
+                 alt="TortoiseSVN">
 
-      <img src="/images/davinciresolve-logo.png"
-        alt="davinci resolve"
-        style="height:40px; width:auto;">
+            <img src="/images/davinciresolve-logo.png"
+                 alt="DaVinci Resolve">
 
-      <img src="/images/trello-logo.png"
-        alt="trello"
-        style="height:40px; width:auto;">
-    
-  </div>
-  </div>
-  </div>
+            <img src="/images/trello-logo.png"
+                 alt="Trello">
+        </div>
 
+        <a href="#theend-details" class="project-learn-more">
+            Learn More
+        </a>
 
+    </div>
 
-<!--SCROLL TO VIDEO The End-->
-<section id="nomotivation" style="position: relative; top: -100px;">
-    <h2></h2>
 </section>
 
-<!--DIVIDE LINE-->
-<hr>
-<!-- PROJECT HEADER (IMAGE VERSION) -->
-<div style="
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  margin-top:50px;
-  margin-bottom:20px;
-">
+<hr class="project-divider">
 
-  <img src="/images/TitleNoMotivation.png" 
-       alt="No Motivation"
-       style="
-         width:50%;
-         max-width:500px;
-         height:auto;
-       ">
 
-</div>
-            <!-- First Video -->
-                <h2 class="video-title"></h2>
-                
-                <p style="max-width: 900px; margin: 0 auto 80px auto;">
-                    
-                
-                <div style="display: flex; justify-content: center; margin: 40px 0;">
-                    <iframe width="900" height="500" src="https://www.youtube.com/embed/WXzWUz1gqq8"
-                        title="" frameborder="0" allowfullscreen>
-                    </iframe>
-                </div>
+<!-- ================================= -->
+<!-- PROJECT 3: NO MOTIVATION -->
+<!-- ================================= -->
 
-                <p style="max-width: 900px; margin: 0 auto 80px auto;">
-                    song by namitape, video by me
-                </p>
-            
-            </section>
+<section class="project-showcase" id="nomotivation">
+
+    <img class="project-title"
+         src="/images/TitleNoMotivation.png"
+         alt="No Motivation">
+
+    <div class="project-video">
+        <iframe
+            src="https://www.youtube.com/embed/WXzWUz1gqq8"
+            title="No Motivation"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <p class="project-description">
+        Song by Namitape. Video animated and created by me.
+    </p>
+
+    <div class="project-bottom-row">
+
+        <a href="#nomotivation-details" class="project-learn-more">
+            Learn More
+        </a>
+
+    </div>
+
+</section>
+
+<!-- END COMPACT ANIMATION PROJECTS ------------------------------------------------------->
+
 <!--TEST SECTION ENDS-->
             <section class="video-section" style="text-align: center; margin-bottom: 120px;"></section>
         </div>
