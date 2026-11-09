@@ -982,3 +982,17 @@ article.about-me {
 }
 
 
+/*resize text size for visdev titles and descriptions*/
+@media (max-width: 600px) {
+  .visdev-title {
+    width: 250px !important;
+  }
+
+  .visdev-title + div {
+    min-width: 100% !important;
+  }
+
+  .visdev-title + div p {
+    font-size: 14px !important;
+  }
+}
