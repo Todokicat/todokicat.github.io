@@ -247,30 +247,45 @@
 </div>
 
 
-                    <div class="card-row" style="display:flex; flex-wrap:wrap; justify-content:center; gap:15px;">
+                    <style>
+.card-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    width: 100%;
+}
 
-    <div class="card" style="flex: 1 1 50%; max-width:150px; font-family:Tilt Warp;">
+@media (max-width: 600px) {
+    .card-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+</style>
+
+<div class="card-row">
+
+    <div class="card">
         <a href="https://kylafulton.com/visdev">
             <img src="/images/brain.gif" />
             <div class="card-text">VisDev</div>
         </a>
     </div>
 
-    <div class="card" style="flex: 1 1 40%; max-width:150px;">
+    <div class="card">
         <a href="https://kylafulton.com/storyboards">
             <img src="/images/thought.gif" />
             <div class="card-text">Storyboards</div>
         </a>
     </div>
 
-    <div class="card" style="flex: 1 1 40%; max-width:150px;">
+    <div class="card">
         <a href="https://kylafulton.com/animation">
             <img src="/images/ball1.gif" />
             <div class="card-text">Animation</div>
         </a>
     </div>
 
-    <div class="card" style="flex: 1 1 40%; max-width:150px;">
+    <div class="card">
         <a href="https://kylafulton.com/illustration">
             <img src="/images/pencil.gif" />
             <div class="card-text">Illustration</div>
