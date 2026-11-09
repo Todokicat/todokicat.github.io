@@ -218,7 +218,38 @@ header {
         aspect-ratio: 1 / 1;
     }
 }
+@media screen and (max-width: 600px) {
 
+    .gallery {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .gallery a {
+        display: block;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .gallery img {
+        display: block;
+        width: 100% !important;
+        height: 160px !important;
+        object-fit: cover;
+        box-sizing: border-box;
+    }
+
+    .gallery video {
+        width: 100% !important;
+        height: 160px !important;
+        object-fit: cover;
+    }
+
+}
 
 /*BEGIN CAROUSEL CSS??*/
 body {
@@ -951,25 +982,3 @@ article.about-me {
 }
 
 
-/*foot name size*/
-<style>
-@media (max-width: 600px) {
-    footer ul {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
-        white-space: nowrap;
-        padding: 0;
-    }
-
-    footer li {
-        font-size: 11px;
-    }
-
-    footer ul li a {
-        font-size: 11px;
-    }
-}
-</style>
