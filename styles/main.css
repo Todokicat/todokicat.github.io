@@ -923,6 +923,12 @@ article.about-me {
     width: 100%;
 }
 
+/* Keep individual wavy words together */
+.wavy-word {
+    white-space: nowrap;
+    display: inline-block;
+}
+
 /* Mobile adjustments */
 @media (max-width: 600px) {
     .wavy-text {
@@ -935,5 +941,11 @@ article.about-me {
         white-space: normal;
         font-size: inherit;
         letter-spacing: normal;
+    }
+
+    /* Prevent LIFE! from breaking onto multiple lines */
+    .intro .wavy-word {
+        white-space: nowrap;
+        display: inline-block;
     }
 }
