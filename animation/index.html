@@ -141,8 +141,10 @@
     <main>
         <div id="main-content-area">
  
- <!---TEST SECTION BEGINS FOR UHHH BUTTONS THAT SCROLL-->
- <style>
+ 
+<!---TEST SECTION BEGINS FOR BUTTONS THAT SCROLL-->
+
+<style>
 html {
     scroll-behavior: smooth;
 }
@@ -150,6 +152,17 @@ html {
 .card-row {
     display: flex;
     gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    overflow: visible;
+}
+
+.card a {
+    display: block;
+    position: relative;
+    overflow: visible;
 }
 
 .card img {
@@ -157,11 +170,62 @@ html {
     height: 144px;
     object-fit: cover;
     border-radius: 12px;
-    transition: transform 0.3s ease;
+    transition: filter 0.4s ease, transform 0.4s ease;
 }
 
+/* Hover scaling */
 .card img:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
+}
+
+/* Unwind - Blue glow */
+.card:nth-child(1) img:hover {
+    filter:
+        drop-shadow(0 0 8px #315b8e)
+        drop-shadow(0 0 8px #451b63);
+}
+
+/* The End - Purple glow */
+.card:nth-child(2) img:hover {
+    filter:
+        drop-shadow(0 0 8px #7d0079)
+        drop-shadow(0 0 8px #572e7b);
+}
+
+/* No Motivation - Yellow glow */
+.card:nth-child(3) img:hover {
+    filter:
+        drop-shadow(0 0 8px #ffc36abf)
+        drop-shadow(0 0 8px #ffdc73c0);
+}
+
+/* Extras - Red glow */
+.card:nth-child(4) img:hover {
+    filter:
+        drop-shadow(0 0 8px #a00020)
+        drop-shadow(0 0 8px #570010);
+}
+
+/* MOBILE: 2 cards per row */
+@media (max-width: 600px) {
+
+    .card-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+        justify-items: center;
+    }
+
+    .card {
+        width: 100%;
+        min-width: 0;
+        text-align: center;
+    }
+
+    .card img {
+        width: 100% !important;
+        height: auto !important;
+    }
 }
 </style>
 
@@ -182,19 +246,20 @@ html {
 
     <div class="card">
         <a href="#nomotivation">
-            <img src="/images/TitleNoMotivation.png" alt="no motivation" style="width:100%; height:auto;">
+            <img src="/images/TitleNoMotivation.png" alt="No Motivation" style="width:100%; height:auto;">
         </a>
     </div>
 
     <div class="card">
         <a href="#extras">
-            <img src="/images/extra.png" alt="extras" style="width:100%; height:auto;">
+            <img src="/images/extra.png" alt="Extras" style="width:100%; height:auto;">
         </a>
     </div>
 
 </div>
 
 <!--END SCROLL BUTTONS AREA-->
+
 <!--SCROLL TO VIDEO-->
 <section id="likeagoodneighbor">
     <h2></h2>
