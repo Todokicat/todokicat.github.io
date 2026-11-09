@@ -311,8 +311,250 @@
 </div>
 <!--end testing bounce-->
 
+
+
+            
+
+
+<!----VIDEO REELS-->
+
+<div class="video-gallery" style=";margin-top:50px;">
+
+    <div class="video-carousel">
+
+        <h2 class="video-title" id="videoTitle">
+            Featured Demo Reel
+        </h2>
+
+        <div class="carousel-main">
+
+            <button class="carousel-arrow"
+                id="prevVideo" aria-label="Previous video">
+                &#10094;
+            </button>
+
+            <div class="video-container">
+                <iframe
+                    id="carouselVideo"
+                    src="https://www.youtube-nocookie.com/embed/YrJQhNPh3SA"
+                    title="Featured Demo Reel"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <button class="carousel-arrow"
+                id="nextVideo" aria-label="Next video">
+                &#10095;
+            </button>
+
+        </div>
+
+        <div class="carousel-indicators"
+            id="carouselIndicators"></div>
+
+    </div>
+
+</div>
+
+<style>
+
+/* Remove background and maximize available space */
+
+.video-gallery,
+.video-carousel {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent !important;
+    background-image: none !important;
+    box-sizing: border-box;
+}
+
+/* Video title */
+
+.video-title {
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* Main carousel */
+
+.carousel-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
+    box-sizing: border-box;
+}
+
+/* Responsive video */
+
+.video-container {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Navigation arrows */
+
+.carousel-arrow {
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/* Mobile layout */
+
+@media screen and (max-width: 768px) {
+
+    .video-gallery,
+    .video-carousel {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .video-title {
+        margin: 10px 0;
+    }
+
+    .carousel-main {
+        width: 100%;
+        gap: 2px;
+        padding: 0;
+    }
+
+    .video-container {
+        flex: 1;
+        width: 100%;
+        max-width: none;
+        aspect-ratio: 16 / 9;
+    }
+
+    .carousel-arrow {
+        padding: 4px;
+        font-size: 14px;
+    }
+
+}
+
+</style>
+
+<script>
+
+(function () {
+
+    function initializeCarousel() {
+
+        const videos = [
+            {
+                title: `<span style="color:#e63868;">D</span><span style="color:#369edb;">E</span><span style="color:#d9ad00;">M</span><span style="color:#54b94d;">O</span> &nbsp; <span style="color:#9368df;">R</span><span style="color:#e63868;">E</span><span style="color:#369edb;">E</span><span style="color:#d9ad00;">L</span>`,
+                id: "YrJQhNPh3SA"
+            },
+            {
+                title: `<span style="color:#e63868;">V</span><span style="color:#369edb;">O</span><span style="color:#d9ad00;">I</span><span style="color:#54b94d;">C</span><span style="color:#9368df;">E</span> &nbsp; <span style="color:#e63868;">R</span><span style="color:#369edb;">E</span><span style="color:#d9ad00;">E</span><span style="color:#54b94d;">L</span>`,
+                id: "YOUR_SECOND_VIDEO_ID"
+            },
+            {
+                title: `<span style="color:#e63868;">G</span><span style="color:#369edb;">R</span><span style="color:#d9ad00;">A</span><span style="color:#54b94d;">P</span><span style="color:#9368df;">H</span><span style="color:#e63868;">I</span><span style="color:#369edb;">C</span> &nbsp; <span style="color:#d9ad00;">D</span><span style="color:#54b94d;">E</span><span style="color:#9368df;">S</span><span style="color:#e63868;">I</span><span style="color:#369edb;">G</span><span style="color:#d9ad00;">N</span>`,
+                id: "YOUR_THIRD_VIDEO_ID"
+            }
+        ];
+
+        let currentVideo = 0;
+
+        const iframe = document.getElementById("carouselVideo");
+        const title = document.getElementById("videoTitle");
+        const indicators = document.getElementById("carouselIndicators");
+
+        if (!iframe || !title || !indicators) return;
+
+        indicators.innerHTML = "";
+
+        videos.forEach((video, index) => {
+
+            const dot = document.createElement("button");
+
+            dot.className = "carousel-dot";
+            dot.setAttribute("aria-label", "Video " + (index + 1));
+
+            dot.addEventListener("click", function () {
+                showVideo(index);
+            });
+
+            indicators.appendChild(dot);
+
+        });
+
+        function showVideo(index) {
+
+            currentVideo = (index + videos.length) % videos.length;
+
+            title.innerHTML =
+                '<span class="wavy-text">' +
+                videos[currentVideo].title +
+                '</span>';
+
+            iframe.src =
+                "https://www.youtube-nocookie.com/embed/" +
+                videos[currentVideo].id;
+
+            updateDots();
+
+        }
+
+        function updateDots() {
+
+            const dots = indicators.querySelectorAll(".carousel-dot");
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle("active", index === currentVideo);
+            });
+
+        }
+
+        document.getElementById("nextVideo").onclick = function () {
+            showVideo(currentVideo + 1);
+        };
+
+        document.getElementById("prevVideo").onclick = function () {
+            showVideo(currentVideo - 1);
+        };
+
+        showVideo(0);
+
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initializeCarousel);
+    } else {
+        initializeCarousel();
+    }
+
+})();
+
+</script>
+
+
 <!----WAVY PAGE TITLE BEGIN-->
-    <h1 class="wavy-text" style="text-align:center;font-size:14px;">
+    <h1 class="wavy-text" style="text-align:center;font-size:14px;margin-top:50px;">
     <span style="color:#ff4f7b;">S</span>
     <span style="color:#5ec8ff;">O</span>
     <span style="color:#ffd400;">F</span>
@@ -361,169 +603,6 @@
     <span><img src="/images/unreal-logo.webp" alt="Unreal Engine" title="Used for motion capture animation and environment building" style="width:50px;height:auto;"></span>
 </div>
 <!--END IMAGES-->
-
-            
-
-
-
-<div class="video-gallery">
-
-    <div class="video-carousel">
-
-        <h2 class="video-title" id="videoTitle">
-            Featured Demo Reel
-        </h2>
-
-        <div class="carousel-main">
-
-            <button class="carousel-arrow"
-                id="prevVideo" aria-label="Previous video">
-                &#10094;
-            </button>
-
-            <div class="video-container">
-                <iframe
-                    id="carouselVideo"
-                    src="https://www.youtube-nocookie.com/embed/YrJQhNPh3SA"
-                    title="Featured Demo Reel"
-                    allowfullscreen>
-                </iframe>
-            </div>
-
-            <button class="carousel-arrow"
-                id="nextVideo" aria-label="Next video">
-                &#10095;
-            </button>
-
-        </div>
-
-        <div class="carousel-indicators"
-            id="carouselIndicators"></div>
-
-    </div>
-
-</div>
-
-
-<!-- VIDEO CAROUSEL JAVASCRIPT -->
-
-
-<script>
-
-(function () {
-
-    function initializeCarousel() {
-
-        const videos = [
-    {
-        title: `<span style="color:#e63868;">D</span><span style="color:#369edb;">E</span><span style="color:#d9ad00;">M</span><span style="color:#54b94d;">O</span> &nbsp; <span style="color:#9368df;">R</span><span style="color:#e63868;">E</span><span style="color:#369edb;">E</span><span style="color:#d9ad00;">L</span>`,
-                id: "YrJQhNPh3SA"
-    },
-    {
-    title: `<span style="color:#e63868;">V</span><span style="color:#369edb;">O</span><span style="color:#d9ad00;">I</span><span style="color:#54b94d;">C</span><span style="color:#9368df;">E</span> &nbsp; <span style="color:#e63868;">R</span><span style="color:#369edb;">E</span><span style="color:#d9ad00;">E</span><span style="color:#54b94d;">L</span>`,
-                id: "YOUR_SECOND_VIDEO_ID"
-},
-{
-    title: `<span style="color:#e63868;">G</span><span style="color:#369edb;">R</span><span style="color:#d9ad00;">A</span><span style="color:#54b94d;">P</span><span style="color:#9368df;">H</span><span style="color:#e63868;">I</span><span style="color:#369edb;">C</span> &nbsp; <span style="color:#d9ad00;">D</span><span style="color:#54b94d;">E</span><span style="color:#9368df;">S</span><span style="color:#e63868;">I</span><span style="color:#369edb;">G</span><span style="color:#d9ad00;">N</span>`,
-                id: "YOUR_THIRD_VIDEO_ID"
-}
-];
-
-        let currentVideo = 0;
-        let autoRotate;
-
-        const iframe = document.getElementById("carouselVideo");
-        const title = document.getElementById("videoTitle");
-        const indicators = document.getElementById("carouselIndicators");
-
-        if (!iframe || !title || !indicators) return;
-
-        // Create dots
-
-        indicators.innerHTML = "";
-
-        videos.forEach((video, index) => {
-
-            const dot = document.createElement("button");
-
-            dot.className = "carousel-dot";
-            dot.setAttribute("aria-label", video.title);
-
-            dot.addEventListener("click", function () {
-                showVideo(index);
-                restartTimer();
-            });
-
-            indicators.appendChild(dot);
-
-        });
-
-        // Display video
-
-        function showVideo(index) {
-
-            currentVideo = (index + videos.length) % videos.length;
-
-            title.innerHTML = '<span class="wavy-text">' +
-    videos[currentVideo].title +
-    '</span>';
-
-            iframe.src =
-                "https://www.youtube-nocookie.com/embed/" +
-                videos[currentVideo].id;
-
-            updateDots();
-
-        }
-
-        // Update dots
-
-        function updateDots() {
-
-            const dots = indicators.querySelectorAll(".carousel-dot");
-
-            dots.forEach((dot, index) => {
-
-                dot.classList.toggle("active", index === currentVideo);
-
-            });
-
-        }
-
-        // Next and previous arrows
-
-        document.getElementById("nextVideo").onclick = function () {
-
-            showVideo(currentVideo + 1);
-            restartTimer();
-
-        };
-
-        document.getElementById("prevVideo").onclick = function () {
-
-            showVideo(currentVideo - 1);
-            restartTimer();
-
-        };
-       
-        // Start carousel
-
-        showVideo(0);
-        startTimer();
-
-    }
-
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", initializeCarousel);
-    } else {
-        initializeCarousel();
-    }
-
-})();
-
-</script>
-
-
 
 
 

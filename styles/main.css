@@ -949,3 +949,27 @@ article.about-me {
         display: inline-block;
     }
 }
+
+
+/*foot name size*/
+<style>
+@media (max-width: 600px) {
+    footer ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        white-space: nowrap;
+        padding: 0;
+    }
+
+    footer li {
+        font-size: 11px;
+    }
+
+    footer ul li a {
+        font-size: 11px;
+    }
+}
+</style>
